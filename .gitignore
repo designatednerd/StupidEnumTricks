@@ -36,20 +36,19 @@ playground.xcworkspace
 # IntelliJ/Kotlin
 
 ## IntelliJ configuration
-.idea/*
-/local
-*.versionsBackup
-workspace.xml
-/tmp
-out/
-/dist
-
+kotlin/.idea/*
+kotlin/local
+kotlin/*.versionsBackup
+kotlin/workspace.xml
+kotlin/tmp
+kotlin/out/
+kotlin/dist
 
 ## Gradle builds
 !**/src/**/build
 !**/test/**/build
 *.iml
 !**/testData/**/*.iml
-.gradle/
-build/
-/dependencies
+kotlin/.gradle/
+kotlin/build/
+kotlin/dependencies
