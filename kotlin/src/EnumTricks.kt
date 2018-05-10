@@ -1,20 +1,20 @@
+inline fun <reified T: Enum<T>> T.next(): T {
+  val currentIndex = this.ordinal
+  val nextIndex = currentIndex + 1
+  val allValues = enumValues<T>()
+  return if (nextIndex >= allValues.size) {
+    allValues[0]
+  } else {
+    allValues[nextIndex]
+  }
+}
 
 enum class KeyboardType {
   QWERTY,
   ABCDEF,
   QWERTZ,
-  AZERTY;
-
-  fun next(): KeyboardType {
-    val allKeyboards = KeyboardType.values()
-    val currentIndex = allKeyboards.indexOf(this)
-    val nextIndex = currentIndex + 1
-    return if (nextIndex >= allKeyboards.size) {
-      allKeyboards[0]
-    }  else {
-      allKeyboards[nextIndex]
-    }
-  }
+  AZERTY,
+  Dvorak;
 
   fun keys(): List<List<String>> {
     return when (this) {
@@ -37,6 +37,11 @@ enum class KeyboardType {
           listOf("A", "Z", "E", "R", "T", "Y", "U", "I", "O", "P"),
           listOf("Q", "S", "D", "F", "G", "H", "J", "K", "L", "M"),
           listOf("W", "X", "C", "V", "B", "N")
+      )
+      Dvorak -> listOf(
+          listOf("P", "Y", "F", "G", "C", "R", "L"),
+          listOf("A", "O", "E", "U", "I", "D", "H", "T", "N", "S"),
+          listOf("Q", "J", "K", "X", "B", "M", "W", "V", "Z")
       )
     }
   }
