@@ -1,7 +1,7 @@
 inline fun <reified T: Enum<T>> T.next(): T {
-  val currentIndex = this.ordinal
-  val nextIndex = currentIndex + 1
   val allValues = enumValues<T>()
+  val currentIndex = allValues.indexOf(this)
+  val nextIndex = currentIndex + 1
   return if (nextIndex >= allValues.size) {
     allValues[0]
   } else {
