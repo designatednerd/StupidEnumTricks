@@ -9,6 +9,17 @@ inline fun <reified T: Enum<T>> T.next(): T {
   }
 }
 
+inline fun <reified T: Enum<T>> T.nextOrNull(): T? {
+  val allValues = enumValues<T>()
+  val currentIndex = allValues.indexOf(this)
+  val nextIndex = currentIndex + 1
+  return if (nextIndex >= allValues.size) {
+    null
+  } else {
+    allValues[nextIndex]
+  }
+}
+
 enum class KeyboardType {
   QWERTY,
   ABCDEF,
@@ -47,6 +58,25 @@ enum class KeyboardType {
   }
 }
 
+enum class DownloadState {
+  NotStarted,
+  Downloading,
+  Completed
+}
+
+sealed class DownloadStateWithInfo {
+
+  class NotStarted: DownloadStateWithInfo()
+
+  class Downloading(val progress: Float): DownloadStateWithInfo()
+
+  class Succeeded(val data: ByteArray): DownloadStateWithInfo()
+
+  class Failed(val error: Error): DownloadStateWithInfo()
+
+}
+
+
 fun main(args: Array<String>) {
 
   for (keyboard in KeyboardType.values()) {
@@ -57,4 +87,14 @@ fun main(args: Array<String>) {
 
   val next = first.next()
   println("After ${first.name} is ${next.name}")
+
+  var downloadState: DownloadState? = DownloadState.NotStarted
+  while (downloadState != null) {
+    println("Current download state: ${downloadState}")
+    downloadState = downloadState.nextOrNull()
+  }
+
+
+  val infoClass = DownloadStateWithInfo.NotStarted()
+
 }
