@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */; };
+		9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8820A4824500121519 /* AppDelegate.swift */; };
+		9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8A20A4824500121519 /* LandingViewController.swift */; };
+		9BEE4A8E20A4824500121519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8C20A4824500121519 /* Main.storyboard */; };
+		9BEE4A9020A4824700121519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8F20A4824700121519 /* Assets.xcassets */; };
+		9BEE4A9320A4824700121519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE4A9120A4824700121519 /* LaunchScreen.storyboard */; };
+		9BEE4A9E20A4824700121519 /* StupidEnumTricksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A9D20A4824700121519 /* StupidEnumTricksTests.swift */; };
+		9BEE4AA920A4824700121519 /* StupidEnumTricksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AA820A4824700121519 /* StupidEnumTricksUITests.swift */; };
+		9BEE4AB720A4825E00121519 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AB620A4825E00121519 /* SignInViewController.swift */; };
+		9BEE4ABA20A4828F00121519 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AB920A4828F00121519 /* RegistrationViewController.swift */; };
+		9BEE4ABC20A4829F00121519 /* LegaleseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4ABB20A4829F00121519 /* LegaleseViewController.swift */; };
+		9BEE4ABF20A485B700121519 /* MainStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4ABE20A485B700121519 /* MainStoryboardSegue.swift */; };
+		9BEE4AC220A489BF00121519 /* TitleLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AC120A489BF00121519 /* TitleLocalizable.swift */; };
+		9BEE4AC420A48B0500121519 /* SeguePerforming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AC320A48B0500121519 /* SeguePerforming.swift */; };
+		9BEE4AC620A48BBB00121519 /* ContentLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AC520A48BBB00121519 /* ContentLocalizable.swift */; };
+		9BEE4AC920A494EF00121519 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AC820A494EF00121519 /* TextInputView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BEE4A9A20A4824700121519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BEE4A7D20A4824500121519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BEE4A8420A4824500121519;
+			remoteInfo = StupidEnumTricks;
+		};
+		9BEE4AA520A4824700121519 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BEE4A7D20A4824500121519 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BEE4A8420A4824500121519;
+			remoteInfo = StupidEnumTricks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Content.swift"; sourceTree = "<group>"; };
+		9BEE4A8520A4824500121519 /* StupidEnumTricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidEnumTricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BEE4A8820A4824500121519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BEE4A8A20A4824500121519 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		9BEE4A8D20A4824500121519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BEE4A8F20A4824700121519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BEE4A9220A4824700121519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BEE4A9420A4824700121519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BEE4A9920A4824700121519 /* StupidEnumTricksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StupidEnumTricksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BEE4A9D20A4824700121519 /* StupidEnumTricksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidEnumTricksTests.swift; sourceTree = "<group>"; };
+		9BEE4A9F20A4824700121519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BEE4AA420A4824700121519 /* StupidEnumTricksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StupidEnumTricksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BEE4AA820A4824700121519 /* StupidEnumTricksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidEnumTricksUITests.swift; sourceTree = "<group>"; };
+		9BEE4AAA20A4824700121519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BEE4AB620A4825E00121519 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9BEE4AB920A4828F00121519 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		9BEE4ABB20A4829F00121519 /* LegaleseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegaleseViewController.swift; sourceTree = "<group>"; };
+		9BEE4ABE20A485B700121519 /* MainStoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryboardSegue.swift; sourceTree = "<group>"; };
+		9BEE4AC120A489BF00121519 /* TitleLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLocalizable.swift; sourceTree = "<group>"; };
+		9BEE4AC320A48B0500121519 /* SeguePerforming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeguePerforming.swift; sourceTree = "<group>"; };
+		9BEE4AC520A48BBB00121519 /* ContentLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLocalizable.swift; sourceTree = "<group>"; };
+		9BEE4AC820A494EF00121519 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BEE4A8220A4824500121519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BEE4A9620A4824700121519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BEE4AA120A4824700121519 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B6BCB8E20A57FA900B0271A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BEE4A7C20A4824500121519 = {
+			isa = PBXGroup;
+			children = (
+				9BEE4A8720A4824500121519 /* StupidEnumTricks */,
+				9BEE4A9C20A4824700121519 /* StupidEnumTricksTests */,
+				9BEE4AA720A4824700121519 /* StupidEnumTricksUITests */,
+				9BEE4A8620A4824500121519 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9BEE4A8620A4824500121519 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE4A8520A4824500121519 /* StupidEnumTricks.app */,
+				9BEE4A9920A4824700121519 /* StupidEnumTricksTests.xctest */,
+				9BEE4AA420A4824700121519 /* StupidEnumTricksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9BEE4A8720A4824500121519 /* StupidEnumTricks */ = {
+			isa = PBXGroup;
+			children = (
+				9B6BCB8E20A57FA900B0271A /* Extensions */,
+				9BEE4ABD20A485A500121519 /* Enums */,
+				9BEE4AC020A489AC00121519 /* Protocols */,
+				9BEE4AB820A4826500121519 /* ViewControllers */,
+				9BEE4AC720A494CD00121519 /* Views */,
+				9BEE4A8820A4824500121519 /* AppDelegate.swift */,
+				9BEE4A8C20A4824500121519 /* Main.storyboard */,
+				9BEE4A8F20A4824700121519 /* Assets.xcassets */,
+				9BEE4A9120A4824700121519 /* LaunchScreen.storyboard */,
+				9BEE4A9420A4824700121519 /* Info.plist */,
+			);
+			path = StupidEnumTricks;
+			sourceTree = "<group>";
+		};
+		9BEE4A9C20A4824700121519 /* StupidEnumTricksTests */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE4A9D20A4824700121519 /* StupidEnumTricksTests.swift */,
+				9BEE4A9F20A4824700121519 /* Info.plist */,
+			);
+			path = StupidEnumTricksTests;
+			sourceTree = "<group>";
+		};
+		9BEE4AA720A4824700121519 /* StupidEnumTricksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE4AA820A4824700121519 /* StupidEnumTricksUITests.swift */,
+				9BEE4AAA20A4824700121519 /* Info.plist */,
+			);
+			path = StupidEnumTricksUITests;
+			sourceTree = "<group>";
+		};
+		9BEE4AB820A4826500121519 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE4A8A20A4824500121519 /* LandingViewController.swift */,
+				9BEE4AB620A4825E00121519 /* SignInViewController.swift */,
+				9BEE4AB920A4828F00121519 /* RegistrationViewController.swift */,
+				9BEE4ABB20A4829F00121519 /* LegaleseViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9BEE4ABD20A485A500121519 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE4ABE20A485B700121519 /* MainStoryboardSegue.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9BEE4AC020A489AC00121519 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE4AC120A489BF00121519 /* TitleLocalizable.swift */,
+				9BEE4AC520A48BBB00121519 /* ContentLocalizable.swift */,
+				9BEE4AC320A48B0500121519 /* SeguePerforming.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9BEE4AC720A494CD00121519 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BEE4AC820A494EF00121519 /* TextInputView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BEE4A8420A4824500121519 /* StupidEnumTricks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BEE4AAD20A4824700121519 /* Build configuration list for PBXNativeTarget "StupidEnumTricks" */;
+			buildPhases = (
+				9BEE4A8120A4824500121519 /* Sources */,
+				9BEE4A8220A4824500121519 /* Frameworks */,
+				9BEE4A8320A4824500121519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StupidEnumTricks;
+			productName = StupidEnumTricks;
+			productReference = 9BEE4A8520A4824500121519 /* StupidEnumTricks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BEE4A9820A4824700121519 /* StupidEnumTricksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BEE4AB020A4824700121519 /* Build configuration list for PBXNativeTarget "StupidEnumTricksTests" */;
+			buildPhases = (
+				9BEE4A9520A4824700121519 /* Sources */,
+				9BEE4A9620A4824700121519 /* Frameworks */,
+				9BEE4A9720A4824700121519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BEE4A9B20A4824700121519 /* PBXTargetDependency */,
+			);
+			name = StupidEnumTricksTests;
+			productName = StupidEnumTricksTests;
+			productReference = 9BEE4A9920A4824700121519 /* StupidEnumTricksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BEE4AA320A4824700121519 /* StupidEnumTricksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BEE4AB320A4824700121519 /* Build configuration list for PBXNativeTarget "StupidEnumTricksUITests" */;
+			buildPhases = (
+				9BEE4AA020A4824700121519 /* Sources */,
+				9BEE4AA120A4824700121519 /* Frameworks */,
+				9BEE4AA220A4824700121519 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BEE4AA620A4824700121519 /* PBXTargetDependency */,
+			);
+			name = StupidEnumTricksUITests;
+			productName = StupidEnumTricksUITests;
+			productReference = 9BEE4AA420A4824700121519 /* StupidEnumTricksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BEE4A7D20A4824500121519 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Designated Nerd Software";
+				TargetAttributes = {
+					9BEE4A8420A4824500121519 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					9BEE4A9820A4824700121519 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 9BEE4A8420A4824500121519;
+					};
+					9BEE4AA320A4824700121519 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 9BEE4A8420A4824500121519;
+					};
+				};
+			};
+			buildConfigurationList = 9BEE4A8020A4824500121519 /* Build configuration list for PBXProject "StupidEnumTricks" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BEE4A7C20A4824500121519;
+			productRefGroup = 9BEE4A8620A4824500121519 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BEE4A8420A4824500121519 /* StupidEnumTricks */,
+				9BEE4A9820A4824700121519 /* StupidEnumTricksTests */,
+				9BEE4AA320A4824700121519 /* StupidEnumTricksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BEE4A8320A4824500121519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BEE4A9320A4824700121519 /* LaunchScreen.storyboard in Resources */,
+				9BEE4A9020A4824700121519 /* Assets.xcassets in Resources */,
+				9BEE4A8E20A4824500121519 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BEE4A9720A4824700121519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BEE4AA220A4824700121519 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BEE4A8120A4824500121519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BEE4AC920A494EF00121519 /* TextInputView.swift in Sources */,
+				9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */,
+				9BEE4ABC20A4829F00121519 /* LegaleseViewController.swift in Sources */,
+				9BEE4AC420A48B0500121519 /* SeguePerforming.swift in Sources */,
+				9BEE4AC220A489BF00121519 /* TitleLocalizable.swift in Sources */,
+				9BEE4AC620A48BBB00121519 /* ContentLocalizable.swift in Sources */,
+				9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */,
+				9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */,
+				9BEE4ABA20A4828F00121519 /* RegistrationViewController.swift in Sources */,
+				9BEE4AB720A4825E00121519 /* SignInViewController.swift in Sources */,
+				9BEE4ABF20A485B700121519 /* MainStoryboardSegue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BEE4A9520A4824700121519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BEE4A9E20A4824700121519 /* StupidEnumTricksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BEE4AA020A4824700121519 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BEE4AA920A4824700121519 /* StupidEnumTricksUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BEE4A9B20A4824700121519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BEE4A8420A4824500121519 /* StupidEnumTricks */;
+			targetProxy = 9BEE4A9A20A4824700121519 /* PBXContainerItemProxy */;
+		};
+		9BEE4AA620A4824700121519 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BEE4A8420A4824500121519 /* StupidEnumTricks */;
+			targetProxy = 9BEE4AA520A4824700121519 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BEE4A8C20A4824500121519 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BEE4A8D20A4824500121519 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BEE4A9120A4824700121519 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BEE4A9220A4824700121519 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BEE4AAB20A4824700121519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BEE4AAC20A4824700121519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BEE4AAE20A4824700121519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StupidEnumTricks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.StupidEnumTricks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BEE4AAF20A4824700121519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StupidEnumTricks/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.StupidEnumTricks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9BEE4AB120A4824700121519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StupidEnumTricksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.StupidEnumTricksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StupidEnumTricks.app/StupidEnumTricks";
+			};
+			name = Debug;
+		};
+		9BEE4AB220A4824700121519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StupidEnumTricksTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.StupidEnumTricksTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StupidEnumTricks.app/StupidEnumTricks";
+			};
+			name = Release;
+		};
+		9BEE4AB420A4824700121519 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StupidEnumTricksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.StupidEnumTricksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StupidEnumTricks;
+			};
+			name = Debug;
+		};
+		9BEE4AB520A4824700121519 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StupidEnumTricksUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.designatednerd.StupidEnumTricksUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StupidEnumTricks;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BEE4A8020A4824500121519 /* Build configuration list for PBXProject "StupidEnumTricks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BEE4AAB20A4824700121519 /* Debug */,
+				9BEE4AAC20A4824700121519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BEE4AAD20A4824700121519 /* Build configuration list for PBXNativeTarget "StupidEnumTricks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BEE4AAE20A4824700121519 /* Debug */,
+				9BEE4AAF20A4824700121519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BEE4AB020A4824700121519 /* Build configuration list for PBXNativeTarget "StupidEnumTricksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BEE4AB120A4824700121519 /* Debug */,
+				9BEE4AB220A4824700121519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BEE4AB320A4824700121519 /* Build configuration list for PBXNativeTarget "StupidEnumTricksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BEE4AB420A4824700121519 /* Debug */,
+				9BEE4AB520A4824700121519 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9BEE4A7D20A4824500121519 /* Project object */;
+}
