@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */; };
+		9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */; };
 		9B82DCB120AB4519009548D8 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
 		9B82DCB420AB4597009548D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B82DCB220AB4597009548D8 /* Localizable.strings */; };
 		9BAD02EA20AB4D97008C1125 /* PlaceholderLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Content.swift"; sourceTree = "<group>"; };
+		9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUITests.swift; sourceTree = "<group>"; };
 		9B82DCB020AB4519009548D8 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		9B82DCB320AB4597009548D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderLocalizable.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				9B6BCB8E20A57FA900B0271A /* Extensions */,
 				9BEE4ABD20A485A500121519 /* Enums */,
+				9BAD02F320AB72BA008C1125 /* Models */,
 				9BEE4AC020A489AC00121519 /* Protocols */,
 				9BEE4AB820A4826500121519 /* ViewControllers */,
 				9BEE4AC720A494CD00121519 /* Views */,
@@ -170,6 +173,7 @@
 			children = (
 				9BEE4AA820A4824700121519 /* StupidEnumTricksUITests.swift */,
 				9BEE4AAA20A4824700121519 /* Info.plist */,
+				9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */,
 			);
 			path = StupidEnumTricksUITests;
 			sourceTree = "<group>";
@@ -375,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */,
 				9BEE4AA920A4824700121519 /* StupidEnumTricksUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
