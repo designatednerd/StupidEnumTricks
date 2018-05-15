@@ -13,17 +13,14 @@ public enum LandingScreenButton: TitleLocalizable {
   case signUp
   case viewTerms
   
-  public var localizedTitle: String {
+  public var localizedTitle: Localized {
     switch self {
     case .signIn:
-      return NSLocalizedString("Sign In",
-                               comment: "Sign in button title")
+      return .button_title_sign_in
     case .signUp:
-      return NSLocalizedString("Sign Up",
-                               comment: "Sign up button title")
+      return .button_title_sign_up
     case .viewTerms:
-      return NSLocalizedString("View Terms & Conditions",
-                               comment:  "Title for button to view legalese")
+      return .button_title_view_terms
     }
   }
 }

@@ -1,0 +1,79 @@
+/* 
+  File.strings
+  StupidEnumTricks
+
+  Created by Ellen Shapiro on 5/15/18.
+  Copyright © 2018 Designated Nerd Software. All rights reserved.
+*/
+
+/* Alert option title for something the user thinks is OK */
+"alert_option_ok" = "OK";
+
+/* Alert option title for cancelling whatever the alert wants to do */
+"alert_option_cancel" = "Cancel";
+
+/* Generic title for when an error has occurred */
+"alert_title_error" = "We're Sorry";
+
+/* Sign in button title */
+"button_title_sign_in" = "Sign In";
+
+/* Sign out button title */
+"button_title_sign_out" = "Sign Out";
+
+/* Sign up button title */
+"button_title_sign_up" = "Sign Up";
+
+/* Title of button to accept legalese they probably haven't read */
+"button_title_terms_accept" = "Accept Terms";
+
+/* Title to reject legalese because they probably actually read it and are horrified */
+"button_title_terms_reject" = "Reject Terms";
+
+/* Title for button to view legalese */
+"button_title_view_terms" = "View Terms & Conditions";
+
+/* Error message format with single placeholder for how long your password needs to be */
+"error_format_password_too_short" = "Your password must be at least %d characters long.";
+
+/* Error message for an invalid email address. */
+"error_message_email_invalid" = "Sorry, that email is not valid.";
+
+/* Error message for field which is empty but shouldn't be */
+"error_message_field_required" = "This field is required.";
+
+/* Error message for when password and confirm password entries don't match */
+"error_message_passwords_dont_match" = "Confirm password is not the same as password. Please try again.";
+
+/* Placeholder for email input */
+"input_placeholder_email" = "your@email.com";
+
+/* Placehlder for password input */
+"input_placeholder_password" = "P@$$w0rd!";
+
+/* Email input title */
+"input_title_email" = "Email";
+
+/* Password input title */
+"input_title_password" = "Password";
+
+/* Title for input to enter the same password so you're sure you entered the one you meant to */
+"input_title_password_confirm" = "Confirm Password";
+
+/* Title for terms and conditions */
+"terms_title" = "Terms & Conditions Of Use";
+
+/* Actual contents of terms and conditions */
+"terms_legalese" = "This application is subject to many terms and conditions, some of which are reasonable, and some of which are not. You, however, are only under the obligation to click the \"Agree\" button so that you can proceed with using the app, rather than actually reading these and figuring out what you're agreeing to.\n\nTERMS AND CONDITIONS\n\n1. Email Marketing\n\nYou agree that your email address can be used in perpetuity throughout this universe and any to-be-discovered parallel universes or multiverses to sell you things which you probably don't need.\n\n2. Naming Rights\n\nBy agreeing to these terms and conditions you grant the makers of this application the right to name your first-born child. You may waive this right by not having children, or sending a notarized letter with a self-addressed stamped envelope for the receipt to:\n\nApplication Developer\nPO Box 666666\nBurbank, CA 91523\n\n3. Metadata\n\nBy agreeing to these terms you allow us to sell your metadata to any commercial, non-profit, or governmental entity we want to in order to pay our bills. We are not responsible for incidences of divorce, military conscription, disappearance from the face of the earth, or unexpectedly creepy push notifications based on these sales.\n\n4. Arbitration\n\nYou agree that any issues arising from the use of this application will be resolved through binding arbitration, with the selection of the arbitrator by the makers of this application. Issues requiring binding arbitration include but are not limited to: Malfunction of the application, leaking of personal data, application causing your phone to become disabled, and/or summoning of Cthulu.\n\nIF YOU AGREE TO THESE TERMS AND CONDITIONS YOU DEFINTELY HAVE NOT READ, PLEASE SELECT \"AGREE\" BELOW.";
+
+/* Title for alert shown when terms are accepted */
+"terms_accepted_alert_title" = "Terms Accepted";
+
+/* Message for alert shown when terms are accepted */
+"terms_accepted_alert_message" = "You accepted the terms. That almost certainly means you didn't read them. Hit the \"OK\" button to go back and read them.";
+
+/* Title for alert shown when terms are rejected */
+"terms_rejected_alert_title" = "Terms Rejected";
+
+/* Message for alert shown when terms are rejected */
+"terms_rejected_alert_message" = "Congratulations! You read the terms and conditions and decided they were insane (because they are). As a reward, tap the \"OK\" button for a cute cat picture you can't escape from without killing the app.";

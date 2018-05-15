@@ -6,21 +6,41 @@
 //  Copyright © 2018 Designated Nerd Software. All rights reserved.
 //
 
+import UIKit
+
 public enum LegaleseButton {
   case accept
   case reject
+}
+
+extension LegaleseButton: TitleLocalizable {
   
-  var localizedTitle: String {
+  public var localizedTitle: Localized {
     switch self {
     case .accept:
-      return NSLocalizedString("Accept Terms", comment: "Title of button to accept legalese they probably haven't read")
+      return .button_title_terms_accept
     case .reject:
-      return NSLocalizedString("Reject Terms", comment: "Title to reject legalese because they probably actually read it and are horrified")
+      return .button_title_terms_reject
     }
   }
 }
 
-import UIKit
+public enum LegaleseLabel {
+  case title
+  case terms
+}
+
+extension LegaleseLabel: ContentLocalizable {
+  
+  public var localizedContent: Localized {
+    switch self {
+    case .title:
+      return .terms_title
+    case .terms:
+      return .terms_legalese
+    }
+  }
+}
 
 class LegaleseVewController: UIViewController {
   
@@ -29,6 +49,16 @@ class LegaleseVewController: UIViewController {
   
   @IBOutlet private var acceptButton: UIButton!
   @IBOutlet private var rejectButton: UIButton!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    self.acceptButton.configure(with: LegaleseButton.accept)
+    self.rejectButton.configure(with: LegaleseButton.reject)
+    
+    self.titleLabel.configure(with: LegaleseLabel.title)
+    self.termsLabel.configure(with: LegaleseLabel.terms)
+  }
 
   
   @IBAction private func acceptTerms() {

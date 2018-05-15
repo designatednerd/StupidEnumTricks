@@ -46,6 +46,7 @@ protocol InputColorConfigurable {
 class TextInputView: UIView, InputColorConfigurable {
   
   private lazy var titleLabel = UILabel()
+  
   private lazy var textField: UITextField = {
     let textField = UITextField()
     textField.translatesAutoresizingMaskIntoConstraints = false
@@ -66,7 +67,9 @@ class TextInputView: UIView, InputColorConfigurable {
     
     return view
   }()
+  
   private lazy var messageLabel = UILabel()
+  
   private lazy var stackView: UIStackView = {
     let stackView = UIStackView()
     stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -104,6 +107,11 @@ class TextInputView: UIView, InputColorConfigurable {
     }
   }
   
+  var localizableMessage: Localized?  {
+    didSet {
+      self.message = self.localizableMessage?.value
+    }
+  }
   @IBInspectable var inactiveColor: UIColor = .darkText {
     didSet {
       self.configureColorForCurrentInputState()
@@ -189,6 +197,13 @@ class TextInputView: UIView, InputColorConfigurable {
     return self.textField.becomeFirstResponder()
   }
   
+  // MARK: - Localization
+  
+  func configure<T: TitleLocalizable & PlaceholderLocalizable>(using type: T) {
+    self.title = type.localizedTitle.value
+    self.placeholder = type.localizedPlaceholder?.value
+  }
+  
   // MARK: - Configuration
   
   private func configureColorForCurrentInputState() {
@@ -201,6 +216,7 @@ class TextInputView: UIView, InputColorConfigurable {
   }
   
   // MARK: - Validation
+  
   private func validateTextField() {
     guard let validator = self.inputValidator else {
       // Nothing to validate, whatever was input is valid.

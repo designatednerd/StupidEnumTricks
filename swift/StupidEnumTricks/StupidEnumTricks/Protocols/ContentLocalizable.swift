@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol ContentLocalizable {
-  var localizedContent: String { get }
+public protocol ContentLocalizable {
+  var localizedContent: Localized { get }
 }
 
 extension UILabel {
   func configure<T: ContentLocalizable>(with localizable: T) {
-    self.text = localizable.localizedContent
+    self.text = localizable.localizedContent.value
   }
 }
 
 extension UITextView {
 
   func configure<T: ContentLocalizable>(with localizable: T) {
-    self.text = localizable.localizedContent
+    self.text = localizable.localizedContent.value
   }
 }

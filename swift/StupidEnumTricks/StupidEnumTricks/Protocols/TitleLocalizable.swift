@@ -8,13 +8,20 @@
 
 import UIKit
 
-protocol TitleLocalizable {
-  var localizedTitle: String { get }
+public protocol TitleLocalizable {
+  var localizedTitle: Localized { get }
 }
 
 extension UIButton {
   
   func configure<T: TitleLocalizable>(with localizable: T) {
-    self.setTitle(localizable.localizedTitle, for: .normal)
+    self.setTitle(localizable.localizedTitle.value, for: .normal)
+  }
+}
+
+extension UIViewController {
+  
+  func configure<T: TitleLocalizable>(with localizable: T) {
+    self.title = localizable.localizedTitle.value
   }
 }

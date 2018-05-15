@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */; };
+		9B82DCB120AB4519009548D8 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
+		9B82DCB420AB4597009548D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B82DCB220AB4597009548D8 /* Localizable.strings */; };
+		9BAD02EA20AB4D97008C1125 /* PlaceholderLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */; };
 		9BAD02F020AB6C11008C1125 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */; };
 		9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8820A4824500121519 /* AppDelegate.swift */; };
 		9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8A20A4824500121519 /* LandingViewController.swift */; };
@@ -45,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Content.swift"; sourceTree = "<group>"; };
+		9B82DCB020AB4519009548D8 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		9B82DCB320AB4597009548D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderLocalizable.swift; sourceTree = "<group>"; };
 		9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		9BEE4A8520A4824500121519 /* StupidEnumTricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidEnumTricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEE4A8820A4824500121519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 				9BEE4A8F20A4824700121519 /* Assets.xcassets */,
 				9BEE4A9120A4824700121519 /* LaunchScreen.storyboard */,
 				9BEE4A9420A4824700121519 /* Info.plist */,
+				9B82DCB220AB4597009548D8 /* Localizable.strings */,
 			);
 			path = StupidEnumTricks;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				9BEE4ABE20A485B700121519 /* MainStoryboardSegue.swift */,
+				9B82DCB020AB4519009548D8 /* Localized.swift */,
 				9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */,
 			);
 			path = Enums;
@@ -183,6 +191,7 @@
 				9BEE4AC120A489BF00121519 /* TitleLocalizable.swift */,
 				9BEE4AC520A48BBB00121519 /* ContentLocalizable.swift */,
 				9BEE4AC320A48B0500121519 /* SeguePerforming.swift */,
+				9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -299,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B82DCB420AB4597009548D8 /* Localizable.strings in Resources */,
 				9BEE4A9320A4824700121519 /* LaunchScreen.storyboard in Resources */,
 				9BEE4A9020A4824700121519 /* Assets.xcassets in Resources */,
 				9BEE4A8E20A4824500121519 /* Main.storyboard in Resources */,
@@ -328,6 +338,7 @@
 			files = (
 				9BEE4AC920A494EF00121519 /* TextInputView.swift in Sources */,
 				9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */,
+				9B82DCB120AB4519009548D8 /* Localized.swift in Sources */,
 				9BEE4ABC20A4829F00121519 /* LegaleseViewController.swift in Sources */,
 				9BEE4AC420A48B0500121519 /* SeguePerforming.swift in Sources */,
 				9BEE4AC220A489BF00121519 /* TitleLocalizable.swift in Sources */,
@@ -373,6 +384,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9B82DCB220AB4597009548D8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B82DCB320AB4597009548D8 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		9BEE4A8C20A4824500121519 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
