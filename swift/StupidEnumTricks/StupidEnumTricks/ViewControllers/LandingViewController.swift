@@ -38,17 +38,4 @@ class LandingViewController: UIViewController {
     self.signUpButton.configure(with: LandingScreenButton.signUp)
     self.termsButton.configure(with: LandingScreenButton.viewTerms)
   }
-
-  @IBAction private func showTerms() {
-    perform(segue: MainStoryboardSegue.toTerms)
-  }
-  
-  @IBAction private func showSignIn() {
-    perform(segue: MainStoryboardSegue.toSignIn)
-  }
-
-  @IBAction private func showSignUp() {
-    perform(segue: MainStoryboardSegue.toSignUp)
-  }
 }
-
