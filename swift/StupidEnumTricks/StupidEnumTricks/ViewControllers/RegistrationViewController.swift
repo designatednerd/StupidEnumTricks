@@ -65,8 +65,31 @@ class RegistrationViewController: UIViewController {
     super.viewDidLoad()
     
     self.emailInput.configure(using: RegistrationInput.email)
+    self.emailInput.inputValidator = Validator.email
+    
     self.passwordInput.configure(using: RegistrationInput.password)
+    self.passwordInput.inputValidator = Validator.password
+    
     self.passwordConfirmInput.configure(using: RegistrationInput.confirmPassword)
+    self.passwordConfirmInput.inputValidator = { [weak self] string in
+      guard let original = self?.passwordInput.text else {
+        return ValidationResult.invalid(localizedErrorMessage: .error_message_field_required)
+      }
+      
+      return Validator.confirmPassword(from: string, with: original)
+    }
+    
     self.signUpButton.configure(with: RegistrationButton.signUp)
   }
   
+  @IBAction private func signUp() {
+    self.view.endEditing(true)
+  
+    guard
+      self.emailInput.inputState == .valid,
+      self.passwordInput.inputState == .valid,
+      self.passwordConfirmInput.inputState == .valid else {
+        return
+    }
+  }
+}

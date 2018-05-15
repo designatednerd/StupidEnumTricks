@@ -28,11 +28,6 @@ enum TextInputState {
   }
 }
 
-struct ValidationResult {
-  let isValid: Bool
-  let errorMessage: String?
-}
-
 protocol InputColorConfigurable {
   
   var inactiveColor: UIColor { get set }

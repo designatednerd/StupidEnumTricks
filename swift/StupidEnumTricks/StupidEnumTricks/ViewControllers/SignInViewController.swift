@@ -60,13 +60,21 @@ class SignInViewController: UIViewController {
     super.viewDidLoad()
     
     self.emailInput.configure(using: SignInInput.email)
+    self.emailInput.inputValidator = Validator.email
+    
     self.passwordInput.configure(using: SignInInput.password)
+    self.passwordInput.inputValidator = Validator.password
     
     self.signInButton.configure(with: SignInButton.signIn)
   }
   
   @IBAction private func signIn() {
+    self.view.endEditing(true)
     
+    guard
+      self.emailInput.inputState == .valid,
+      self.passwordInput.inputState == .valid else {
+        return
+    }
   }
-  
 }
