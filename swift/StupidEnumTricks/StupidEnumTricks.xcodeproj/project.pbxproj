@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */; };
+		9BAD02F020AB6C11008C1125 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */; };
 		9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8820A4824500121519 /* AppDelegate.swift */; };
 		9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8A20A4824500121519 /* LandingViewController.swift */; };
 		9BEE4A8E20A4824500121519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8C20A4824500121519 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Content.swift"; sourceTree = "<group>"; };
+		9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
 		9BEE4A8520A4824500121519 /* StupidEnumTricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidEnumTricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEE4A8820A4824500121519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BEE4A8A20A4824500121519 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				9BEE4ABE20A485B700121519 /* MainStoryboardSegue.swift */,
+				9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */,
 				9BEE4ABA20A4828F00121519 /* RegistrationViewController.swift in Sources */,
 				9BEE4AB720A4825E00121519 /* SignInViewController.swift in Sources */,
+				9BAD02F020AB6C11008C1125 /* ImageAsset.swift in Sources */,
 				9BEE4ABF20A485B700121519 /* MainStoryboardSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
