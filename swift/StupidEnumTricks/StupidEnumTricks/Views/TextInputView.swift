@@ -49,6 +49,7 @@ class TextInputView: UIView, InputColorConfigurable {
       textField.heightAnchor.constraint(equalToConstant: 44)
     ])
     textField.borderStyle = .roundedRect
+    textField.delegate = self
     
     return textField
   }()
@@ -63,7 +64,13 @@ class TextInputView: UIView, InputColorConfigurable {
     return view
   }()
   
-  private lazy var messageLabel = UILabel()
+  private lazy var messageLabel: UILabel = {
+    let label = UILabel()
+    label.font = .systemFont(ofSize: 12)
+    label.numberOfLines = 0
+    
+    return label
+  }()
   
   private lazy var stackView: UIStackView = {
     let stackView = UIStackView()
@@ -89,14 +96,14 @@ class TextInputView: UIView, InputColorConfigurable {
   
   @IBInspectable private var placeholder: String? {
     didSet {
-      self.textField.placeholder = placeholder
+      self.textField.placeholder = self.placeholder
       self.setNeedsDisplay()
     }
   }
   
   @IBInspectable private var message: String? {
     didSet {
-      self.messageLabel.text = message
+      self.messageLabel.text = self.message
       self.messageLabel.updateHiddenFromContent()
       self.setNeedsDisplay()
     }
@@ -107,6 +114,11 @@ class TextInputView: UIView, InputColorConfigurable {
       self.message = self.localizableMessage?.value
     }
   }
+  
+  var text: String? {
+    return self.textField.text
+  }
+  
   @IBInspectable var inactiveColor: UIColor = .darkText {
     didSet {
       self.configureColorForCurrentInputState()

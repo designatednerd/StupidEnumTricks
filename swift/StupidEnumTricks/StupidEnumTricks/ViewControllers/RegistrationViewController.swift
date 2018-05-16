@@ -91,5 +91,7 @@ class RegistrationViewController: UIViewController {
       self.passwordConfirmInput.inputState == .valid else {
         return
     }
+    
+    self.perform(segue: MainStoryboardSegue.toLoggedInCats)
   }
 }

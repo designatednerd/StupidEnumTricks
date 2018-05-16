@@ -12,7 +12,10 @@
 		9B82DCB120AB4519009548D8 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
 		9B82DCB420AB4597009548D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B82DCB220AB4597009548D8 /* Localizable.strings */; };
 		9BAD02EA20AB4D97008C1125 /* PlaceholderLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */; };
-		9BAD02F020AB6C11008C1125 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */; };
+		9BAD02EC20AB64CB008C1125 /* UIViewController+AlertConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02EB20AB64CB008C1125 /* UIViewController+AlertConvenience.swift */; };
+		9BAD02EE20AB6AD4008C1125 /* AdorableCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02ED20AB6AD4008C1125 /* AdorableCatViewController.swift */; };
+		9BAD02F020AB6C11008C1125 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02EF20AB6C11008C1125 /* Asset.swift */; };
+		9BAD02F220AB6EF3008C1125 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F120AB6EF3008C1125 /* Array+Random.swift */; };
 		9BAD02F520AB72D0008C1125 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F420AB72D0008C1125 /* Validator.swift */; };
 		9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8820A4824500121519 /* AppDelegate.swift */; };
 		9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8A20A4824500121519 /* LandingViewController.swift */; };
@@ -54,7 +57,10 @@
 		9B82DCB020AB4519009548D8 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		9B82DCB320AB4597009548D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderLocalizable.swift; sourceTree = "<group>"; };
-		9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		9BAD02EB20AB64CB008C1125 /* UIViewController+AlertConvenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+AlertConvenience.swift"; sourceTree = "<group>"; };
+		9BAD02ED20AB6AD4008C1125 /* AdorableCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdorableCatViewController.swift; sourceTree = "<group>"; };
+		9BAD02EF20AB6C11008C1125 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		9BAD02F120AB6EF3008C1125 /* Array+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
 		9BAD02F420AB72D0008C1125 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		9BEE4A8520A4824500121519 /* StupidEnumTricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidEnumTricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEE4A8820A4824500121519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */,
+				9BAD02EB20AB64CB008C1125 /* UIViewController+AlertConvenience.swift */,
+				9BAD02F120AB6EF3008C1125 /* Array+Random.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 				9BEE4AB620A4825E00121519 /* SignInViewController.swift */,
 				9BEE4AB920A4828F00121519 /* RegistrationViewController.swift */,
 				9BEE4ABB20A4829F00121519 /* LegaleseViewController.swift */,
+				9BAD02ED20AB6AD4008C1125 /* AdorableCatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,7 +203,7 @@
 			children = (
 				9BEE4ABE20A485B700121519 /* MainStoryboardSegue.swift */,
 				9B82DCB020AB4519009548D8 /* Localized.swift */,
-				9BAD02EF20AB6C11008C1125 /* ImageAsset.swift */,
+				9BAD02EF20AB6C11008C1125 /* Asset.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -355,6 +364,7 @@
 				9B82DCB120AB4519009548D8 /* Localized.swift in Sources */,
 				9BEE4ABC20A4829F00121519 /* LegaleseViewController.swift in Sources */,
 				9BEE4AC420A48B0500121519 /* SeguePerforming.swift in Sources */,
+				9BAD02EC20AB64CB008C1125 /* UIViewController+AlertConvenience.swift in Sources */,
 				9BEE4AC220A489BF00121519 /* TitleLocalizable.swift in Sources */,
 				9BEE4AC620A48BBB00121519 /* ContentLocalizable.swift in Sources */,
 				9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */,
@@ -362,8 +372,11 @@
 				9BEE4ABA20A4828F00121519 /* RegistrationViewController.swift in Sources */,
 				9BAD02F520AB72D0008C1125 /* Validator.swift in Sources */,
 				9BEE4AB720A4825E00121519 /* SignInViewController.swift in Sources */,
-				9BAD02F020AB6C11008C1125 /* ImageAsset.swift in Sources */,
+				9BAD02EA20AB4D97008C1125 /* PlaceholderLocalizable.swift in Sources */,
+				9BAD02EE20AB6AD4008C1125 /* AdorableCatViewController.swift in Sources */,
+				9BAD02F020AB6C11008C1125 /* Asset.swift in Sources */,
 				9BEE4ABF20A485B700121519 /* MainStoryboardSegue.swift in Sources */,
+				9BAD02F220AB6EF3008C1125 /* Array+Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

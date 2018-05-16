@@ -9,7 +9,17 @@
 import UIKit
 
 enum MainStoryboardSegue: String, SeguePerforming {
+  case toCats
+  case toLoggedInCats
   case toSignIn
   case toSignUp
   case toTerms
+  
+  init?(from segue: UIStoryboardSegue) {
+    guard let identifier = segue.identifier else {
+      return nil
+    }
+    
+    self.init(rawValue: identifier)
+  }
 }

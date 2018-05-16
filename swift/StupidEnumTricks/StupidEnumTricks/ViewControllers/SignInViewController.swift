@@ -76,5 +76,7 @@ class SignInViewController: UIViewController {
       self.passwordInput.inputState == .valid else {
         return
     }
+    
+    self.perform(segue: MainStoryboardSegue.toLoggedInCats)
   }
 }

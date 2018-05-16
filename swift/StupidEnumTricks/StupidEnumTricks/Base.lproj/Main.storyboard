@@ -74,10 +74,10 @@
             </objects>
             <point key="canvasLocation" x="889" y="-580"/>
         </scene>
-        <!--Terms View Controller-->
+        <!--Legalese Vew Controller-->
         <scene sceneID="zqI-G5-BSf">
             <objects>
-                <viewController id="wal-Va-2en" customClass="TermsViewController" sceneMemberID="viewController">
+                <viewController id="wal-Va-2en" customClass="LegaleseVewController" customModule="StupidEnumTricks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3D1-Ij-kgb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qR5-gN-4Qk">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="273"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEGALESE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfu-eb-09S">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LEGALESE" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfu-eb-09S">
                                                 <rect key="frame" x="20" y="20" width="335" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                                 <nil key="textColor"/>
@@ -107,10 +107,16 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLe-ga-9yA">
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="rejectTerms" destination="wal-Va-2en" eventType="touchUpInside" id="pye-8f-Us8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbR-SQ-2Hu">
                                                         <rect key="frame" x="0.0" y="30" width="335" height="30"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="acceptTerms" destination="wal-Va-2en" eventType="touchUpInside" id="zNY-pg-IUm"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -150,25 +156,127 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="add-vU-fRO"/>
                     </view>
+                    <connections>
+                        <outlet property="acceptButton" destination="bbR-SQ-2Hu" id="QKS-m7-FSp"/>
+                        <outlet property="rejectButton" destination="JLe-ga-9yA" id="uob-E1-TnW"/>
+                        <outlet property="termsLabel" destination="yaO-En-tHJ" id="e79-qS-KmC"/>
+                        <outlet property="titleLabel" destination="lfu-eb-09S" id="iDb-aJ-pU6"/>
+                        <segue destination="gUY-Dv-X5G" kind="presentation" identifier="toCats" id="3KY-N1-v1h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LF-OT-YXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781.5999999999999" y="192.95352323838082"/>
+            <point key="canvasLocation" x="1782" y="184"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Adorable Cat View Controller-->
+        <scene sceneID="TOG-eQ-bXI">
+            <objects>
+                <viewController id="gUY-Dv-X5G" customClass="AdorableCatViewController" customModule="StupidEnumTricks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rz4-yf-bt9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="window" translatesAutoresizingMaskIntoConstraints="NO" id="koK-qn-PX0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdT-8V-vDH">
+                                <rect key="frame" x="289" y="20" width="66" height="28"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOut" destination="gUY-Dv-X5G" eventType="touchUpInside" id="9rm-k4-VvL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v2T-Uz-FVK" firstAttribute="trailing" secondItem="koK-qn-PX0" secondAttribute="trailing" id="4en-1T-pGc"/>
+                            <constraint firstItem="v2T-Uz-FVK" firstAttribute="trailing" secondItem="BdT-8V-vDH" secondAttribute="trailing" constant="20" id="HG8-dK-aw1"/>
+                            <constraint firstItem="BdT-8V-vDH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rz4-yf-bt9" secondAttribute="leading" constant="20" symbolic="YES" id="LDc-kk-Wgs"/>
+                            <constraint firstItem="BdT-8V-vDH" firstAttribute="top" secondItem="v2T-Uz-FVK" secondAttribute="top" id="aTx-aQ-WLL"/>
+                            <constraint firstAttribute="bottom" secondItem="koK-qn-PX0" secondAttribute="bottom" id="szl-jZ-W4u"/>
+                            <constraint firstItem="koK-qn-PX0" firstAttribute="top" secondItem="rz4-yf-bt9" secondAttribute="top" id="ugK-yD-Nwv"/>
+                            <constraint firstItem="koK-qn-PX0" firstAttribute="leading" secondItem="v2T-Uz-FVK" secondAttribute="leading" id="vXT-8P-LVT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v2T-Uz-FVK"/>
+                    </view>
+                    <connections>
+                        <outlet property="catImageView" destination="koK-qn-PX0" id="n0s-rA-h3d"/>
+                        <outlet property="signOutButton" destination="BdT-8V-vDH" id="Hpx-Ns-xh0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QlZ-yc-Xxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2549.5" y="183.5"/>
+        </scene>
+        <!--Registration View Controller-->
         <scene sceneID="KzX-MD-nLG">
             <objects>
-                <viewController id="uv3-gw-i0g" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController id="uv3-gw-i0g" customClass="RegistrationViewController" customModule="StupidEnumTricks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hRS-ba-AQJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qqx-dt-pb3">
+                                <rect key="frame" x="20" y="84" width="335" height="301.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edr-vw-XH0" customClass="TextInputView" customModule="StupidEnumTricks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="80.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="email addy"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="nextInput" destination="t4W-O0-sul" id="awz-Tv-Up0"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t4W-O0-sul" customClass="TextInputView" customModule="StupidEnumTricks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90.5" width="335" height="80.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="password"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="nextInput" destination="ooL-db-hzW" id="9XT-wa-OwV"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooL-db-hzW" customClass="TextInputView" customModule="StupidEnumTricks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="181" width="335" height="80.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Confirm password"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="password"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZ7-xU-gws">
+                                        <rect key="frame" x="0.0" y="271.5" width="335" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pjh-WF-2pO" firstAttribute="trailing" secondItem="Qqx-dt-pb3" secondAttribute="trailing" constant="20" id="0D2-Zq-Ftf"/>
+                            <constraint firstItem="Qqx-dt-pb3" firstAttribute="leading" secondItem="Pjh-WF-2pO" secondAttribute="leading" constant="20" id="Ict-Eb-o0X"/>
+                            <constraint firstItem="Qqx-dt-pb3" firstAttribute="top" secondItem="Pjh-WF-2pO" secondAttribute="top" constant="20" id="Y6L-oz-iFd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Pjh-WF-2pO"/>
                     </view>
+                    <connections>
+                        <outlet property="emailInput" destination="edr-vw-XH0" id="hyW-KK-tnL"/>
+                        <outlet property="passwordConfirmInput" destination="ooL-db-hzW" id="WD2-X0-zhp"/>
+                        <outlet property="passwordInput" destination="t4W-O0-sul" id="LIK-ig-8sn"/>
+                        <outlet property="signUpButton" destination="CZ7-xU-gws" id="o8y-pj-CQq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zsk-Wb-MuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="-580"/>
+            <point key="canvasLocation" x="1781.5999999999999" y="-580.65967016491754"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="dKS-dI-nXr">
@@ -178,39 +286,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGY-LZ-nIS" customClass="TextInputView" customModule="StupidEnumTricks" customModuleProvider="target">
-                                <rect key="frame" x="20" y="174.5" width="335" height="80.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="$ecur3_p4$$w0rd!"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureTextEntry" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv4-HW-4IH">
-                                <rect key="frame" x="20" y="275" width="335" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T92-gf-j1l" customClass="TextInputView" customModule="StupidEnumTricks" customModuleProvider="target">
-                                <rect key="frame" x="20" y="84" width="335" height="80.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Title"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="your@email.com"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ax0-9l-uNw">
+                                <rect key="frame" x="20" y="84" width="335" height="211"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T92-gf-j1l" customClass="TextInputView" customModule="StupidEnumTricks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="80.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Title"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="your@email.com"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="nextInput" destination="hGY-LZ-nIS" id="OSG-AI-CfX"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGY-LZ-nIS" customClass="TextInputView" customModule="StupidEnumTricks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90.5" width="335" height="80.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Password"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="$ecur3_p4$$w0rd!"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureTextEntry" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zv4-HW-4IH">
+                                        <rect key="frame" x="0.0" y="181" width="335" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="signIn" destination="XkP-Ne-5jr" eventType="touchUpInside" id="6wi-Cp-or8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hGY-LZ-nIS" firstAttribute="top" secondItem="T92-gf-j1l" secondAttribute="bottom" constant="10" id="45z-Gh-OKy"/>
-                            <constraint firstItem="T92-gf-j1l" firstAttribute="leading" secondItem="sxv-eC-cib" secondAttribute="leading" constant="20" id="8jF-di-OW4"/>
-                            <constraint firstItem="T92-gf-j1l" firstAttribute="top" secondItem="sxv-eC-cib" secondAttribute="top" constant="20" id="bao-jl-WQR"/>
-                            <constraint firstItem="sxv-eC-cib" firstAttribute="trailing" secondItem="T92-gf-j1l" secondAttribute="trailing" constant="20" id="e79-AA-p5O"/>
-                            <constraint firstItem="Zv4-HW-4IH" firstAttribute="trailing" secondItem="hGY-LZ-nIS" secondAttribute="trailing" id="giO-O6-a0u"/>
-                            <constraint firstItem="Zv4-HW-4IH" firstAttribute="leading" secondItem="hGY-LZ-nIS" secondAttribute="leading" id="nnf-h5-vyk"/>
-                            <constraint firstItem="hGY-LZ-nIS" firstAttribute="leading" secondItem="T92-gf-j1l" secondAttribute="leading" id="v47-qN-rL7"/>
-                            <constraint firstItem="Zv4-HW-4IH" firstAttribute="top" secondItem="hGY-LZ-nIS" secondAttribute="bottom" constant="20" id="xV3-JV-QIK"/>
-                            <constraint firstItem="hGY-LZ-nIS" firstAttribute="trailing" secondItem="T92-gf-j1l" secondAttribute="trailing" id="zPA-zS-FOv"/>
+                            <constraint firstItem="ax0-9l-uNw" firstAttribute="leading" secondItem="sxv-eC-cib" secondAttribute="leading" constant="20" id="Vfe-uY-7e3"/>
+                            <constraint firstItem="ax0-9l-uNw" firstAttribute="top" secondItem="sxv-eC-cib" secondAttribute="top" constant="20" id="aCK-Y5-4pJ"/>
+                            <constraint firstItem="sxv-eC-cib" firstAttribute="trailing" secondItem="ax0-9l-uNw" secondAttribute="trailing" constant="20" id="rE3-z6-tmi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sxv-eC-cib"/>
                     </view>
@@ -218,6 +331,7 @@
                         <outlet property="emailInput" destination="T92-gf-j1l" id="f34-Y4-1zH"/>
                         <outlet property="passwordInput" destination="hGY-LZ-nIS" id="MZQ-zD-V02"/>
                         <outlet property="signInButton" destination="Zv4-HW-4IH" id="bxP-tu-xQe"/>
+                        <segue destination="gUY-Dv-X5G" kind="presentation" identifier="toLoggedInCats" id="SJv-is-Won"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpp-8U-tuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,4 +357,10 @@
             <point key="canvasLocation" x="164" y="-579.76011994002999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="window" width="1344" height="1008"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SJv-is-Won"/>
+    </inferredMetricsTieBreakers>
 </document>
