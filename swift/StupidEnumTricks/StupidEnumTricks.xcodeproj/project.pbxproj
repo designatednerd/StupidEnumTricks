@@ -17,13 +17,12 @@
 		9BAD02F020AB6C11008C1125 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02EF20AB6C11008C1125 /* Asset.swift */; };
 		9BAD02F220AB6EF3008C1125 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F120AB6EF3008C1125 /* Array+Random.swift */; };
 		9BAD02F520AB72D0008C1125 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F420AB72D0008C1125 /* Validator.swift */; };
+		9BDCBBD420AD9CCF00FE5618 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBD320AD9CCF00FE5618 /* ValidatorTests.swift */; };
 		9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8820A4824500121519 /* AppDelegate.swift */; };
 		9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8A20A4824500121519 /* LandingViewController.swift */; };
 		9BEE4A8E20A4824500121519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8C20A4824500121519 /* Main.storyboard */; };
 		9BEE4A9020A4824700121519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8F20A4824700121519 /* Assets.xcassets */; };
 		9BEE4A9320A4824700121519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEE4A9120A4824700121519 /* LaunchScreen.storyboard */; };
-		9BEE4A9E20A4824700121519 /* StupidEnumTricksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A9D20A4824700121519 /* StupidEnumTricksTests.swift */; };
-		9BEE4AA920A4824700121519 /* StupidEnumTricksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AA820A4824700121519 /* StupidEnumTricksUITests.swift */; };
 		9BEE4AB720A4825E00121519 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AB620A4825E00121519 /* SignInViewController.swift */; };
 		9BEE4ABA20A4828F00121519 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AB920A4828F00121519 /* RegistrationViewController.swift */; };
 		9BEE4ABC20A4829F00121519 /* LegaleseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4ABB20A4829F00121519 /* LegaleseViewController.swift */; };
@@ -62,6 +61,7 @@
 		9BAD02EF20AB6C11008C1125 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		9BAD02F120AB6EF3008C1125 /* Array+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
 		9BAD02F420AB72D0008C1125 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		9BDCBBD320AD9CCF00FE5618 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		9BEE4A8520A4824500121519 /* StupidEnumTricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidEnumTricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEE4A8820A4824500121519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BEE4A8A20A4824500121519 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +70,6 @@
 		9BEE4A9220A4824700121519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BEE4A9420A4824700121519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BEE4A9920A4824700121519 /* StupidEnumTricksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StupidEnumTricksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BEE4A9D20A4824700121519 /* StupidEnumTricksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidEnumTricksTests.swift; sourceTree = "<group>"; };
 		9BEE4A9F20A4824700121519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BEE4AA420A4824700121519 /* StupidEnumTricksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StupidEnumTricksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEE4AA820A4824700121519 /* StupidEnumTricksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidEnumTricksUITests.swift; sourceTree = "<group>"; };
@@ -170,8 +169,8 @@
 		9BEE4A9C20A4824700121519 /* StupidEnumTricksTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BEE4A9D20A4824700121519 /* StupidEnumTricksTests.swift */,
 				9BEE4A9F20A4824700121519 /* Info.plist */,
+				9BDCBBD320AD9CCF00FE5618 /* ValidatorTests.swift */,
 			);
 			path = StupidEnumTricksTests;
 			sourceTree = "<group>";
@@ -384,7 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BEE4A9E20A4824700121519 /* StupidEnumTricksTests.swift in Sources */,
+				9BDCBBD420AD9CCF00FE5618 /* ValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +392,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */,
-				9BEE4AA920A4824700121519 /* StupidEnumTricksUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
