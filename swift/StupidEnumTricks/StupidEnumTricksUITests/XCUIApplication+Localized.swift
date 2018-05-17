@@ -58,31 +58,63 @@ extension XCUIApplication {
     self.buttons.withTitle(title).tap()
   }
   
-  func assertButtonExists(_ exists: Bool, withTitle title: TitleLocalizable) {
-    XCTAssertEqual(exists, self.buttons.withTitle(title).exists)
+  func assertButtonExists(_ exists: Bool,
+                          withTitle title: TitleLocalizable,
+                          file: StaticString = #file,
+                          line: UInt = #line) {
+    XCTAssertEqual(exists,
+                   self.buttons.withTitle(title).exists,
+                   file: file,
+                   line: line)
   }
   
-  func assertLabelExists(_ exists: Bool, withContent content: ContentLocalizable) {
-    XCTAssertEqual(exists, self.staticTexts.withContent(content).exists)
+  func assertLabelExists(_ exists: Bool,
+                         withContent content: ContentLocalizable,
+                         file: StaticString = #file,
+                         line: UInt = #line) {
+    XCTAssertEqual(exists,
+                   self.staticTexts.withContent(content).exists,
+                   file: file,
+                   line: line)
   }
   
-  func assertTextInputExists(_ exists: Bool, withInputInfo info: (TitleLocalizable & PlaceholderLocalizable)) {
-    XCTAssertEqual(exists, self.staticTexts.withTitle(info).exists)
-    XCTAssertEqual(exists, self.textFields.withPlaceholder(info).exists)
+  func assertTextInputExists(_ exists: Bool,
+                             withInputInfo info: (TitleLocalizable & PlaceholderLocalizable),
+                             file: StaticString = #file,
+                             line: UInt = #line) {
+    XCTAssertEqual(exists,
+                   self.staticTexts.withTitle(info).exists,
+                   file: file,
+                   line: line)
+    XCTAssertEqual(exists,
+                   self.textFields.withPlaceholder(info).exists,
+                   file: file,
+                   line: line)
   }
   
-  func waitForButtonWithTitle(_ title: TitleLocalizable, timeout: TimeInterval = 5) {
+  func waitForButtonWithTitle(_ title: TitleLocalizable,
+                              timeout: TimeInterval = 5,
+                              file: StaticString = #file,
+                              line: UInt = #line) {
    
    let foundAfterWait = self.buttons.withTitle(title).waitForExistence(timeout: timeout)
-    XCTAssertTrue(foundAfterWait)
+    XCTAssertTrue(foundAfterWait,
+                  file: file,
+                  line: line)
   }
   
-  func waitForNavigationBarTitle(_ title: Localized, timeout: TimeInterval = 5) {
+  func waitForNavigationBarTitle(_ title: Localized,
+                                 timeout: TimeInterval = 5,
+                                 file: StaticString = #file,
+                                 line: UInt = #line) {
     let foundAfterWait = self.navigationBars[title.value].waitForExistence(timeout: timeout)
-    XCTAssertTrue(foundAfterWait)
+    XCTAssertTrue(foundAfterWait,
+                  file: file,
+                  line: line)
   }
   
-  func enterText(_ text: String, intoTextFieldWithPlaceholder placeholder: PlaceholderLocalizable) {
+  func enterText(_ text: String,
+                 intoTextFieldWithPlaceholder placeholder: PlaceholderLocalizable) {
     self.textFields.withPlaceholder(placeholder).typeText(text)
   }
 }
