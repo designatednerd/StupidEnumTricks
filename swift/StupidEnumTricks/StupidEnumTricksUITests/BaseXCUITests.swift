@@ -10,7 +10,11 @@ import XCTest
 
 class BaseXCUITests: XCTestCase {
   
-  var app: XCUIApplication!
+  static var app: XCUIApplication!
+  
+  var app: XCUIApplication {
+    return BaseXCUITests.app!
+  }
   
   override func setUp() {
     super.setUp()
@@ -19,13 +23,13 @@ class BaseXCUITests: XCTestCase {
     // has already been launched, don't restart it, because that
     // takes foreeeeeeeever. Downside is that tests may fail if a
     // prior test fails, but upside is WAY less insane test run times.
-    if self.app == nil {
+    if BaseXCUITests.app == nil {
       self.relaunchApp()
     }
   }
   
   func relaunchApp() {
-    self.app = XCUIApplication()
+    BaseXCUITests.app = XCUIApplication()
     self.app.launch()
   }
 }
