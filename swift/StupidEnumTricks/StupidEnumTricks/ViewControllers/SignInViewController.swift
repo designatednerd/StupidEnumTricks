@@ -8,47 +8,6 @@
 
 import UIKit
 
-enum SignInInput {
-  case email
-  case password
-}
-
-extension SignInInput: TitleLocalizable {
-  var localizedTitle: Localized {
-    switch self {
-    case .email:
-      return .input_title_email
-    case .password:
-      return .input_title_password
-    }
-  }
-}
-
-extension SignInInput: PlaceholderLocalizable {
-  var localizedPlaceholder: Localized? {
-    switch self {
-    case .email:
-      return .input_placeholder_email
-    case .password:
-      return .input_placeholder_password
-    }
-  }
-}
-
-enum SignInButton {
-  case signIn
-}
-
-extension SignInButton: TitleLocalizable {
-  
-  var localizedTitle: Localized {
-    switch self {
-    case .signIn:
-      return .button_title_sign_in
-    }
-  }
-}
-
 class SignInViewController: UIViewController {
   
   @IBOutlet private var emailInput: TextInputView!
@@ -58,6 +17,8 @@ class SignInViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    self.title = Localized.sign_in_screen_title.value
     
     self.emailInput.configure(using: SignInInput.email)
     self.emailInput.inputValidator = Validator.email

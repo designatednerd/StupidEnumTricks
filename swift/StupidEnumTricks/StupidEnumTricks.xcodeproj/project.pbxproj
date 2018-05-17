@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B4D35FE20ADCB3400DE60F9 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D35FD20ADCB3400DE60F9 /* AssetTests.swift */; };
 		9B4D360220ADD12F00DE60F9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B82DCB220AB4597009548D8 /* Localizable.strings */; };
+		9B4D360420ADDAD700DE60F9 /* LegaleseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360320ADDAD700DE60F9 /* LegaleseEnums.swift */; };
+		9B4D360520ADDAD900DE60F9 /* LegaleseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360320ADDAD700DE60F9 /* LegaleseEnums.swift */; };
 		9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */; };
 		9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */; };
 		9B82DCB120AB4519009548D8 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
@@ -19,11 +21,17 @@
 		9BAD02F020AB6C11008C1125 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02EF20AB6C11008C1125 /* Asset.swift */; };
 		9BAD02F220AB6EF3008C1125 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F120AB6EF3008C1125 /* Array+Random.swift */; };
 		9BAD02F520AB72D0008C1125 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F420AB72D0008C1125 /* Validator.swift */; };
+		9BDCBBC120AC8BFD00FE5618 /* LandingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBC020AC8BFD00FE5618 /* LandingEnums.swift */; };
+		9BDCBBC220AC8BFD00FE5618 /* LandingEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBC020AC8BFD00FE5618 /* LandingEnums.swift */; };
 		9BDCBBC320AC8C1F00FE5618 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
 		9BDCBBC420AC8CA700FE5618 /* TitleLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AC120A489BF00121519 /* TitleLocalizable.swift */; };
 		9BDCBBC520AC8CAA00FE5618 /* ContentLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AC520A48BBB00121519 /* ContentLocalizable.swift */; };
 		9BDCBBC620AC8CAC00FE5618 /* PlaceholderLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */; };
 		9BDCBBC920AC8CCF00FE5618 /* XCUIApplication+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBC720AC8CCF00FE5618 /* XCUIApplication+Localized.swift */; };
+		9BDCBBCB20AC92AD00FE5618 /* SignInEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBCA20AC92AD00FE5618 /* SignInEnums.swift */; };
+		9BDCBBCC20AC92AD00FE5618 /* SignInEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBCA20AC92AD00FE5618 /* SignInEnums.swift */; };
+		9BDCBBCE20AD97C600FE5618 /* RegistrationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBCD20AD97C600FE5618 /* RegistrationEnums.swift */; };
+		9BDCBBCF20AD97C600FE5618 /* RegistrationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBCD20AD97C600FE5618 /* RegistrationEnums.swift */; };
 		9BDCBBD220AD988F00FE5618 /* BaseXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBD020AD988F00FE5618 /* BaseXCUITests.swift */; };
 		9BDCBBD420AD9CCF00FE5618 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBD320AD9CCF00FE5618 /* ValidatorTests.swift */; };
 		9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8820A4824500121519 /* AppDelegate.swift */; };
@@ -60,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		9B4D35FD20ADCB3400DE60F9 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
+		9B4D360320ADDAD700DE60F9 /* LegaleseEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegaleseEnums.swift; sourceTree = "<group>"; };
 		9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Content.swift"; sourceTree = "<group>"; };
 		9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUITests.swift; sourceTree = "<group>"; };
 		9B82DCB020AB4519009548D8 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
@@ -204,9 +213,13 @@
 			isa = PBXGroup;
 			children = (
 				9BEE4A8A20A4824500121519 /* LandingViewController.swift */,
+				9BDCBBC020AC8BFD00FE5618 /* LandingEnums.swift */,
 				9BEE4AB620A4825E00121519 /* SignInViewController.swift */,
+				9BDCBBCA20AC92AD00FE5618 /* SignInEnums.swift */,
 				9BEE4AB920A4828F00121519 /* RegistrationViewController.swift */,
+				9BDCBBCD20AD97C600FE5618 /* RegistrationEnums.swift */,
 				9BEE4ABB20A4829F00121519 /* LegaleseViewController.swift */,
+				9B4D360320ADDAD700DE60F9 /* LegaleseEnums.swift */,
 				9BAD02ED20AB6AD4008C1125 /* AdorableCatViewController.swift */,
 			);
 			path = ViewControllers;
@@ -374,7 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDCBBCB20AC92AD00FE5618 /* SignInEnums.swift in Sources */,
 				9BEE4AC920A494EF00121519 /* TextInputView.swift in Sources */,
+				9BDCBBC120AC8BFD00FE5618 /* LandingEnums.swift in Sources */,
+				9BDCBBCE20AD97C600FE5618 /* RegistrationEnums.swift in Sources */,
 				9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */,
 				9B82DCB120AB4519009548D8 /* Localized.swift in Sources */,
 				9BEE4ABC20A4829F00121519 /* LegaleseViewController.swift in Sources */,
@@ -387,6 +403,7 @@
 				9BEE4ABA20A4828F00121519 /* RegistrationViewController.swift in Sources */,
 				9BAD02F520AB72D0008C1125 /* Validator.swift in Sources */,
 				9BEE4AB720A4825E00121519 /* SignInViewController.swift in Sources */,
+				9B4D360420ADDAD700DE60F9 /* LegaleseEnums.swift in Sources */,
 				9BAD02EA20AB4D97008C1125 /* PlaceholderLocalizable.swift in Sources */,
 				9BAD02EE20AB6AD4008C1125 /* AdorableCatViewController.swift in Sources */,
 				9BAD02F020AB6C11008C1125 /* Asset.swift in Sources */,
@@ -409,8 +426,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BDCBBC620AC8CAC00FE5618 /* PlaceholderLocalizable.swift in Sources */,
+				9BDCBBC220AC8BFD00FE5618 /* LandingEnums.swift in Sources */,
 				9BDCBBC420AC8CA700FE5618 /* TitleLocalizable.swift in Sources */,
+				9BDCBBCF20AD97C600FE5618 /* RegistrationEnums.swift in Sources */,
 				9BDCBBC520AC8CAA00FE5618 /* ContentLocalizable.swift in Sources */,
+				9B4D360520ADDAD900DE60F9 /* LegaleseEnums.swift in Sources */,
+				9BDCBBCC20AC92AD00FE5618 /* SignInEnums.swift in Sources */,
 				9BDCBBC320AC8C1F00FE5618 /* Localized.swift in Sources */,
 				9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */,
 				9BDCBBC920AC8CCF00FE5618 /* XCUIApplication+Localized.swift in Sources */,
