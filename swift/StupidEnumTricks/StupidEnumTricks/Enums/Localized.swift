@@ -35,6 +35,7 @@ public enum Localized: String {
   case input_title_password
   case input_title_password_confirm
   
+  case sign_in_screen_title
   case sign_in_failure_alert_title
   case sign_in_failure_alert_message
   case sign_in_success_alert_title

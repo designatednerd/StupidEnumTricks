@@ -10,7 +10,7 @@ import XCTest
 
 extension XCUIElementQuery {
   
-  func withTitle(_ title: TitleLocalizable) -> XCUIElement {
+  func withTitle(_ title: TitleLocalizable) -> XCUIElement {    
     return self[title.localizedTitle.value]
   }
   
@@ -19,13 +19,32 @@ extension XCUIElementQuery {
   }
   
   func withPlaceholder(_ placeholder: PlaceholderLocalizable) -> XCUIElement {
-    let textFieldPredicate = NSPredicate { item, _ in
-      guard let textField = item as? UITextField else { return false }
+    let predicate = NSPredicate { item, _ in
+      // This actually returns an XCElementSnapshot, which is framework-private. From the class-dumped headers:
+      // https://github.com/orta/XCTest-Public-Headers/blob/master/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/XCTest/XCElementSnapshot.h
+      // You can see that it's an NSObject subclass. So let's at least get that far:
+      guard let anything = item as? NSObject  else {
+          return false
+      }
       
-      return textField.placeholder == placeholder.localizedPlaceholder?.value
+      // You can also see from the class-dumped headers that there's a
+      // `placeholderValue` property on `XCElementSnapshot`. From logging,
+      // you can tell that this is where the placeholder on a text field lives. Therefore:
+      guard let placeholderValue = anything.value(forKey: "placeholderValue") as? String else {
+        // If there's no value, but your passed in placeholder is also nil, you're good.
+        return (placeholder.localizedPlaceholder == nil)
+      }
+      
+      guard let localizedPlaceholder = placeholder.localizedPlaceholder?.value else {
+        // There was a value, but there's no localized placeholder. That doesn't match.
+        return false
+      }
+
+      // Holy hell, an actual value comparison!
+      return placeholderValue == localizedPlaceholder
     }
     
-    return self.element(matching: textFieldPredicate)
+    return self.element(matching: predicate)
   }
 }
 
@@ -55,6 +74,11 @@ extension XCUIApplication {
   func waitForButtonWithTitle(_ title: TitleLocalizable, timeout: TimeInterval = 5) {
    
    let foundAfterWait = self.buttons.withTitle(title).waitForExistence(timeout: timeout)
+    XCTAssertTrue(foundAfterWait)
+  }
+  
+  func waitForNavigationBarTitle(_ title: Localized, timeout: TimeInterval = 5) {
+    let foundAfterWait = self.navigationBars[title.value].waitForExistence(timeout: timeout)
     XCTAssertTrue(foundAfterWait)
   }
   
