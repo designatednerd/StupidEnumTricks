@@ -8,6 +8,10 @@
 
 import Foundation
 
+private class BundleHelper: NSObject {
+  // I am an empty object to help feed bundle for class
+}
+
 public enum Localized: String {
   case alert_option_ok
   case alert_option_cancel
@@ -44,7 +48,9 @@ public enum Localized: String {
   case terms_rejected_alert_message
   
   public var value: String {
-    return NSLocalizedString(self.rawValue, comment: "")
+    return NSLocalizedString(self.rawValue,
+                             bundle: Bundle(for: BundleHelper.self),
+                             comment: "")
   }
   
   public func formattedValue(with integer: Int) -> String {
