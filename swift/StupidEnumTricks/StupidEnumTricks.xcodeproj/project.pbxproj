@@ -18,6 +18,12 @@
 		9BAD02F020AB6C11008C1125 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02EF20AB6C11008C1125 /* Asset.swift */; };
 		9BAD02F220AB6EF3008C1125 /* Array+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F120AB6EF3008C1125 /* Array+Random.swift */; };
 		9BAD02F520AB72D0008C1125 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F420AB72D0008C1125 /* Validator.swift */; };
+		9BDCBBC320AC8C1F00FE5618 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
+		9BDCBBC420AC8CA700FE5618 /* TitleLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AC120A489BF00121519 /* TitleLocalizable.swift */; };
+		9BDCBBC520AC8CAA00FE5618 /* ContentLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4AC520A48BBB00121519 /* ContentLocalizable.swift */; };
+		9BDCBBC620AC8CAC00FE5618 /* PlaceholderLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */; };
+		9BDCBBC920AC8CCF00FE5618 /* XCUIApplication+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBC720AC8CCF00FE5618 /* XCUIApplication+Localized.swift */; };
+		9BDCBBD220AD988F00FE5618 /* BaseXCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBD020AD988F00FE5618 /* BaseXCUITests.swift */; };
 		9BDCBBD420AD9CCF00FE5618 /* ValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDCBBD320AD9CCF00FE5618 /* ValidatorTests.swift */; };
 		9BEE4A8920A4824500121519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8820A4824500121519 /* AppDelegate.swift */; };
 		9BEE4A8B20A4824500121519 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEE4A8A20A4824500121519 /* LandingViewController.swift */; };
@@ -63,6 +69,11 @@
 		9BAD02EF20AB6C11008C1125 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		9BAD02F120AB6EF3008C1125 /* Array+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Random.swift"; sourceTree = "<group>"; };
 		9BAD02F420AB72D0008C1125 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		9BDCBBC020AC8BFD00FE5618 /* LandingEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingEnums.swift; sourceTree = "<group>"; };
+		9BDCBBC720AC8CCF00FE5618 /* XCUIApplication+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Localized.swift"; sourceTree = "<group>"; };
+		9BDCBBCA20AC92AD00FE5618 /* SignInEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEnums.swift; sourceTree = "<group>"; };
+		9BDCBBCD20AD97C600FE5618 /* RegistrationEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationEnums.swift; sourceTree = "<group>"; };
+		9BDCBBD020AD988F00FE5618 /* BaseXCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXCUITests.swift; sourceTree = "<group>"; };
 		9BDCBBD320AD9CCF00FE5618 /* ValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorTests.swift; sourceTree = "<group>"; };
 		9BEE4A8520A4824500121519 /* StupidEnumTricks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StupidEnumTricks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEE4A8820A4824500121519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,8 +191,10 @@
 		9BEE4AA720A4824700121519 /* StupidEnumTricksUITests */ = {
 			isa = PBXGroup;
 			children = (
+				9BDCBBC720AC8CCF00FE5618 /* XCUIApplication+Localized.swift */,
 				9BEE4AAA20A4824700121519 /* Info.plist */,
 				9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */,
+				9BDCBBD020AD988F00FE5618 /* BaseXCUITests.swift */,
 			);
 			path = StupidEnumTricksUITests;
 			sourceTree = "<group>";
@@ -393,7 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BDCBBC620AC8CAC00FE5618 /* PlaceholderLocalizable.swift in Sources */,
+				9BDCBBC420AC8CA700FE5618 /* TitleLocalizable.swift in Sources */,
+				9BDCBBC520AC8CAA00FE5618 /* ContentLocalizable.swift in Sources */,
+				9BDCBBC320AC8C1F00FE5618 /* Localized.swift in Sources */,
 				9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */,
+				9BDCBBC920AC8CCF00FE5618 /* XCUIApplication+Localized.swift in Sources */,
+				9BDCBBD220AD988F00FE5618 /* BaseXCUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
