@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4D35FE20ADCB3400DE60F9 /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D35FD20ADCB3400DE60F9 /* AssetTests.swift */; };
 		9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */; };
 		9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */; };
 		9B82DCB120AB4519009548D8 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B4D35FD20ADCB3400DE60F9 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Content.swift"; sourceTree = "<group>"; };
 		9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUITests.swift; sourceTree = "<group>"; };
 		9B82DCB020AB4519009548D8 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
@@ -72,7 +74,6 @@
 		9BEE4A9920A4824700121519 /* StupidEnumTricksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StupidEnumTricksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEE4A9F20A4824700121519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BEE4AA420A4824700121519 /* StupidEnumTricksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StupidEnumTricksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BEE4AA820A4824700121519 /* StupidEnumTricksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StupidEnumTricksUITests.swift; sourceTree = "<group>"; };
 		9BEE4AAA20A4824700121519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BEE4AB620A4825E00121519 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9BEE4AB920A4828F00121519 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 			children = (
 				9BEE4A9F20A4824700121519 /* Info.plist */,
 				9BDCBBD320AD9CCF00FE5618 /* ValidatorTests.swift */,
+				9B4D35FD20ADCB3400DE60F9 /* AssetTests.swift */,
 			);
 			path = StupidEnumTricksTests;
 			sourceTree = "<group>";
@@ -178,7 +180,6 @@
 		9BEE4AA720A4824700121519 /* StupidEnumTricksUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9BEE4AA820A4824700121519 /* StupidEnumTricksUITests.swift */,
 				9BEE4AAA20A4824700121519 /* Info.plist */,
 				9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */,
 			);
@@ -383,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4D35FE20ADCB3400DE60F9 /* AssetTests.swift in Sources */,
 				9BDCBBD420AD9CCF00FE5618 /* ValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

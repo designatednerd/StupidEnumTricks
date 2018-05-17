@@ -21,7 +21,7 @@ public enum Asset: String {
   }
   
   // A simulation of `CaseIterable`, coming in Swift 4.2
-  static var allCases: [Asset] {
+  public static var allCases: [Asset] {
     return [
       .cinnamon_rolls,
       .innocent,
