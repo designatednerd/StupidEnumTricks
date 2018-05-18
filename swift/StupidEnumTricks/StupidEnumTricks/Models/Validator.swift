@@ -33,9 +33,9 @@ struct ValidationResult {
   }
 }
 
-public struct Validator {
+struct Validator {
   
-  public static let passwordMinimumCharacters = 6
+  static let passwordMinimumCharacters = 6
 
   static func email(from string: String?) -> ValidationResult {
     guard

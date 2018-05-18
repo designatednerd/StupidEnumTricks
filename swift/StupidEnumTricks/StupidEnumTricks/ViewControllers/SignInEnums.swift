@@ -8,13 +8,13 @@
 
 import Foundation
 
-public enum SignInInput {
+enum SignInInput {
   case email
   case password
 }
 
 extension SignInInput: TitleLocalizable {
-  public var localizedTitle: Localized {
+  var localizedTitle: Localized {
     switch self {
     case .email:
       return .input_title_email
@@ -25,7 +25,7 @@ extension SignInInput: TitleLocalizable {
 }
 
 extension SignInInput: PlaceholderLocalizable {
-  public var localizedPlaceholder: Localized? {
+  var localizedPlaceholder: Localized? {
     switch self {
     case .email:
       return .input_placeholder_email
@@ -35,13 +35,13 @@ extension SignInInput: PlaceholderLocalizable {
   }
 }
 
-public enum SignInButton {
+enum SignInButton {
   case signIn
 }
 
 extension SignInButton: TitleLocalizable {
   
-  public var localizedTitle: Localized {
+  var localizedTitle: Localized {
     switch self {
     case .signIn:
       return .button_title_sign_in

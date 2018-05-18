@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol TitleLocalizable {
+protocol TitleLocalizable {
   var localizedTitle: Localized { get }
 }
 

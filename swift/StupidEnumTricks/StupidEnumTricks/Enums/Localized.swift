@@ -12,7 +12,7 @@ private class BundleHelper: NSObject {
   // I am an empty object to help feed bundle for class
 }
 
-public enum Localized: String {
+enum Localized: String {
   case alert_option_ok
   case alert_option_cancel
   case alert_title_error
@@ -48,17 +48,17 @@ public enum Localized: String {
   case terms_rejected_alert_title
   case terms_rejected_alert_message
   
-  public var value: String {
+  var value: String {
     return NSLocalizedString(self.rawValue,
                              bundle: Bundle(for: BundleHelper.self),
                              comment: "")
   }
   
-  public func formattedValue(with integer: Int) -> String {
+  func formattedValue(with integer: Int) -> String {
     return String(format: self.value, integer)
   }
   
-  public func formattedValue(with string: String) -> String {
+  func formattedValue(with string: String) -> String {
     return String(format: self.value, string)
   }
 }

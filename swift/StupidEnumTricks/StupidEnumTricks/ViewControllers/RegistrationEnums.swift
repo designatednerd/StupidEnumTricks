@@ -8,14 +8,14 @@
 
 import Foundation
 
-public enum RegistrationInput {
+enum RegistrationInput {
   case email
   case password
   case confirmPassword
 }
 
 extension RegistrationInput: TitleLocalizable {
-  public var localizedTitle: Localized {
+  var localizedTitle: Localized {
     switch self {
     case .email:
       return .input_title_email
@@ -28,7 +28,7 @@ extension RegistrationInput: TitleLocalizable {
 }
 
 extension RegistrationInput: PlaceholderLocalizable {
-  public var localizedPlaceholder: Localized? {
+  var localizedPlaceholder: Localized? {
     switch self {
     case .email:
       return .input_placeholder_email
@@ -39,13 +39,13 @@ extension RegistrationInput: PlaceholderLocalizable {
   }
 }
 
-public enum RegistrationButton {
+enum RegistrationButton {
   case signUp
 }
 
 extension RegistrationButton: TitleLocalizable {
   
-  public var localizedTitle: Localized {
+  var localizedTitle: Localized {
     switch self {
     case .signUp:
       return .button_title_sign_up

@@ -9,7 +9,7 @@
 
 import UIKit
 
-public enum Asset: String {
+enum Asset: String {
   case cinnamon_rolls
   case innocent
   case no
@@ -21,7 +21,7 @@ public enum Asset: String {
   }
   
   // A simulation of `CaseIterable`, coming in Swift 4.2
-  public static var allCases: [Asset] {
+  static var allCases: [Asset] {
     return [
       .cinnamon_rolls,
       .innocent,

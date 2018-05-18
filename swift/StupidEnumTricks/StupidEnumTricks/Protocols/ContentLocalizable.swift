@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol ContentLocalizable {
+protocol ContentLocalizable {
   var localizedContent: Localized { get }
 }
 

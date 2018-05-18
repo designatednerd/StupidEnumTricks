@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol PlaceholderLocalizable {
+protocol PlaceholderLocalizable {
   
   var localizedPlaceholder: Localized? { get }
 }

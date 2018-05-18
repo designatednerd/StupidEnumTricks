@@ -8,12 +8,12 @@
 
 import Foundation
 
-public enum LandingScreenButton: TitleLocalizable {
+enum LandingScreenButton: TitleLocalizable {
   case signIn
   case signUp
   case viewTerms
 
-  public var localizedTitle: Localized {
+  var localizedTitle: Localized {
     switch self {
     case .signIn:
       return .button_title_sign_in

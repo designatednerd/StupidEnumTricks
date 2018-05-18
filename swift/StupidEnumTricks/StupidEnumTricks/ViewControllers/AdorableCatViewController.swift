@@ -8,20 +8,6 @@
 
 import UIKit
 
-public enum AdorableCatButton {
-  case signOut
-}
-
-extension AdorableCatButton: TitleLocalizable {
-  
-  public var localizedTitle: Localized {
-    switch self {
-    case .signOut:
-      return .button_title_sign_out
-    }
-  }
-}
-
 class AdorableCatViewController: UIViewController {
   
   @IBOutlet private var catImageView: UIImageView!
