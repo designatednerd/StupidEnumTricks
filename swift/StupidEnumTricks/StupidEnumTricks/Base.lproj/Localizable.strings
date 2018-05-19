@@ -60,6 +60,9 @@
 /* Title for input to enter the same password so you're sure you entered the one you meant to */
 "input_title_password_confirm" = "Confirm Password";
 
+/* Title for the landing screen */
+"landing_screen_title" = "Welcome to My Awesome App!";
+
 /* Title for the sign in screen */
 "sign_in_screen_title" = "Sign in to My App!";
 

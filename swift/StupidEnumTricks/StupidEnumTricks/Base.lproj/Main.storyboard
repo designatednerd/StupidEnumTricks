@@ -44,8 +44,8 @@
                                     <segue destination="wal-Va-2en" kind="presentation" identifier="toTerms" modalPresentationStyle="fullScreen" id="V12-1y-r7H"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to My Awesome App!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-Dz-XGl">
-                                <rect key="frame" x="40" y="104" width="295" height="62.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-Dz-XGl">
+                                <rect key="frame" x="40" y="104" width="295" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,6 +65,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7wz-b7-zJ9"/>
                     <connections>
+                        <outlet property="landingTitleLabel" destination="zZT-Dz-XGl" id="rbU-5p-HNs"/>
                         <outlet property="signInButton" destination="Aha-4p-h8i" id="zCC-jn-NLo"/>
                         <outlet property="signUpButton" destination="tMS-Vh-Xyu" id="MdV-9u-2fN"/>
                         <outlet property="termsButton" destination="1Pj-jI-xuS" id="Ppt-qK-wL6"/>

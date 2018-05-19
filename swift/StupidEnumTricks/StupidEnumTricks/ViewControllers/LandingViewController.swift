@@ -10,6 +10,8 @@ import UIKit
 
 class LandingViewController: UIViewController {
   
+  @IBOutlet private var landingTitleLabel: UILabel!
+  
   @IBOutlet private var signInButton: UIButton!
   @IBOutlet private var signUpButton: UIButton!
   @IBOutlet private var termsButton: UIButton!
@@ -20,5 +22,7 @@ class LandingViewController: UIViewController {
     self.signInButton.configure(with: LandingScreenButton.signIn)
     self.signUpButton.configure(with: LandingScreenButton.signUp)
     self.termsButton.configure(with: LandingScreenButton.viewTerms)
+    
+    self.landingTitleLabel.configure(with: LandingScreenLabel.title)
   }
 }

@@ -28,6 +28,15 @@ class BaseXCUITests: XCTestCase {
     }
   }
   
+  override func tearDown() {
+    if !self.app.staticTexts.withContent(LandingScreenLabel.title).exists {
+      // Something went wrong and we're not back at the start. Relaunch.
+      self.relaunchApp()
+    }
+    
+    super.tearDown()
+  }
+  
   func relaunchApp() {
     BaseXCUITests.app = XCUIApplication()
     self.app.launch()
