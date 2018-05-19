@@ -25,6 +25,7 @@ extension XCUIElementQuery {
   fileprivate func withString(_ string: String) -> XCUIElement {
     return self[string]
   }
+  
   fileprivate static func placeholderPredicate(for placeholder: PlaceholderLocalizable) -> NSPredicate {
     return NSPredicate { item, _ in
       // This actually returns an XCElementSnapshot, which is framework-private. From the class-dumped headers:
@@ -52,10 +53,59 @@ extension XCUIElementQuery {
     }
   }
   
+  fileprivate static func childWithValuePredicate(_ value: String) -> NSPredicate {
+    return NSPredicate { item, _ in
+      guard let anything = item as? NSObject  else {
+        return false
+      }
+      
+      guard let children = anything.value(forKey: "children") as? [NSObject] else {
+        return false
+      }
+      
+      return children.contains(where: { object in
+        object.value(forKey: "label") as? String == value
+      })
+    }
+  }
+  
+  fileprivate static func childWithPlaceholderPredicate(for placeholder: PlaceholderLocalizable) -> NSPredicate {
+    return NSPredicate { item, _ in
+      guard let anything = item as? NSObject  else {
+        return false
+      }
+      
+      guard let children = anything.value(forKey: "children") as? [NSObject] else {
+        return false
+      }
+      
+      guard let value = placeholder.localizedPlaceholder?.value else {
+        assertionFailure("Don't use this when there's no value for the placeholder")
+        return false
+      }
+      
+      return children.contains(where: { object in
+        object.value(forKey: "placeholderValue") as? String == value
+      })
+    }
+  }
+  
   func withPlaceholder(_ placeholder: PlaceholderLocalizable) -> XCUIElement {
     let predicate = XCUIElementQuery.placeholderPredicate(for: placeholder)
     return self.element(matching: predicate)
   }
+}
+
+extension XCUIElement {
+  
+  var hasKeyboardFocus: Bool {
+    guard let focused = self.value(forKey: "hasKeyboardFocus") as? Bool else {
+      return false
+    }
+    
+    return focused
+  }
+  
 }
 
 extension XCUIApplication {
@@ -67,6 +117,17 @@ extension XCUIApplication {
       return self.textFields.withPlaceholder(input)
     }
   }
+  
+  func input(_ input: TextInputLocalizable) -> XCUIElement {
+    let childWithPlaceholderPredicate = XCUIElementQuery.childWithPlaceholderPredicate(for: input)
+    
+    let childWithTitlePredicate = XCUIElementQuery.childWithValuePredicate(input.localizedTitle.value)
+    
+    let compound = NSCompoundPredicate(andPredicateWithSubpredicates: [childWithPlaceholderPredicate, childWithTitlePredicate])
+    
+    return self.otherElements.element(matching: compound)
+  }
+  
   func tapBackButton() {
     self.navigationBars.buttons["Back"].tap()
   }
@@ -125,6 +186,31 @@ extension XCUIApplication {
                    line: line)
   }
   
+  func assertTextInput(_ input: TextInputLocalizable,
+                       displayingLocalizedMessage message: Localized,
+                       file: StaticString = #file,
+                       line: UInt = #line) {
+    self.assertTextInput(input,
+                         displayingMessage: message.value,
+                         file: file,
+                         line: line)
+  }
+  
+  func assertTextInput(_ input: TextInputLocalizable,
+                       displayingMessage message: String,
+                       file: StaticString = #file,
+                       line: UInt = #line) {
+    
+    let textInput = self.input(input)
+    XCTAssertTrue(textInput.exists,
+                  file: file,
+                  line: line)
+    
+    XCTAssertTrue(textInput.staticTexts[message].exists,
+                  file: file,
+                  line: line)
+  }
+  
   func waitForButtonWithTitle(_ title: TitleLocalizable,
                               timeout: TimeInterval = 5,
                               file: StaticString = #file,
@@ -151,6 +237,11 @@ extension XCUIApplication {
     
     self.textFieldForInput(input).typeText(text)
   }
+  
+  func enterNewline() {
+    self.typeText("\n")
+  }
+  
   func assertTextInputIsActive(_ active: Bool,
                                input: TextInputLocalizable,
                                isSecure: Bool = false,

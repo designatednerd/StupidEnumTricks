@@ -13,8 +13,10 @@
 		9B4D360520ADDAD900DE60F9 /* LegaleseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360320ADDAD700DE60F9 /* LegaleseEnums.swift */; };
 		9B4D360720AECE3C00DE60F9 /* AdorableCatEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360620AECE3C00DE60F9 /* AdorableCatEnums.swift */; };
 		9B4D360820AECE3C00DE60F9 /* AdorableCatEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360620AECE3C00DE60F9 /* AdorableCatEnums.swift */; };
+		9B4D360B20AED23700DE60F9 /* SignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360920AED23700DE60F9 /* SignInUITests.swift */; };
 		9B4D360D20AF09C300DE60F9 /* TextInputLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360C20AF09C300DE60F9 /* TextInputLocalizable.swift */; };
 		9B4D360E20AF09C300DE60F9 /* TextInputLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360C20AF09C300DE60F9 /* TextInputLocalizable.swift */; };
+		9B4D360F20AF15B900DE60F9 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAD02F420AB72D0008C1125 /* Validator.swift */; };
 		9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */; };
 		9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */; };
 		9B82DCB120AB4519009548D8 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
@@ -74,6 +76,7 @@
 		9B4D35FD20ADCB3400DE60F9 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		9B4D360320ADDAD700DE60F9 /* LegaleseEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegaleseEnums.swift; sourceTree = "<group>"; };
 		9B4D360620AECE3C00DE60F9 /* AdorableCatEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdorableCatEnums.swift; sourceTree = "<group>"; };
+		9B4D360920AED23700DE60F9 /* SignInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUITests.swift; sourceTree = "<group>"; };
 		9B4D360C20AF09C300DE60F9 /* TextInputLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputLocalizable.swift; sourceTree = "<group>"; };
 		9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Content.swift"; sourceTree = "<group>"; };
 		9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUITests.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 				9BEE4AAA20A4824700121519 /* Info.plist */,
 				9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */,
 				9BDCBBD020AD988F00FE5618 /* BaseXCUITests.swift */,
+				9B4D360920AED23700DE60F9 /* SignInUITests.swift */,
 			);
 			path = StupidEnumTricksUITests;
 			sourceTree = "<group>";
@@ -442,8 +446,10 @@
 				9BDCBBCF20AD97C600FE5618 /* RegistrationEnums.swift in Sources */,
 				9BDCBBC520AC8CAA00FE5618 /* ContentLocalizable.swift in Sources */,
 				9B4D360520ADDAD900DE60F9 /* LegaleseEnums.swift in Sources */,
+				9B4D360F20AF15B900DE60F9 /* Validator.swift in Sources */,
 				9BDCBBCC20AC92AD00FE5618 /* SignInEnums.swift in Sources */,
 				9BDCBBC320AC8C1F00FE5618 /* Localized.swift in Sources */,
+				9B4D360B20AED23700DE60F9 /* SignInUITests.swift in Sources */,
 				9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */,
 				9BDCBBC920AC8CCF00FE5618 /* XCUIApplication+Localized.swift in Sources */,
 				9B4D360E20AF09C300DE60F9 /* TextInputLocalizable.swift in Sources */,
