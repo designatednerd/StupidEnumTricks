@@ -32,6 +32,9 @@ class SignInViewController: UIViewController {
   @IBAction private func signIn() {
     self.view.endEditing(true)
     
+    self.emailInput.validateTextField()
+    self.passwordInput.validateTextField()
+    
     guard
       self.emailInput.inputState == .valid,
       self.passwordInput.inputState == .valid else {

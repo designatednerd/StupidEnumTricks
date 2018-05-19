@@ -225,7 +225,7 @@ class TextInputView: UIView, InputColorConfigurable {
   
   // MARK: - Validation
   
-  private func validateTextField() {
+  func validateTextField() {
     guard let validator = self.inputValidator else {
       // Nothing to validate, whatever was input is valid.
       self.inputState = .valid

@@ -39,6 +39,10 @@ class RegistrationViewController: UIViewController {
   
   @IBAction private func signUp() {
     self.view.endEditing(true)
+    
+    self.emailInput.validateTextField()
+    self.passwordInput.validateTextField()
+    self.passwordConfirmInput.validateTextField()
   
     guard
       self.emailInput.inputState == .valid,
