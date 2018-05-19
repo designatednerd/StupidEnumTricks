@@ -14,7 +14,8 @@ enum RegistrationInput {
   case confirmPassword
 }
 
-extension RegistrationInput: TitleLocalizable {
+extension RegistrationInput: TextInputLocalizable {
+  
   var localizedTitle: Localized {
     switch self {
     case .email:
@@ -25,9 +26,7 @@ extension RegistrationInput: TitleLocalizable {
       return .input_title_password_confirm
     }
   }
-}
-
-extension RegistrationInput: PlaceholderLocalizable {
+  
   var localizedPlaceholder: Localized? {
     switch self {
     case .email:
@@ -35,6 +34,16 @@ extension RegistrationInput: PlaceholderLocalizable {
     case .password,
          .confirmPassword:
       return .input_placeholder_password
+    }
+  }
+  
+  var isSecure: Bool {
+    switch self {
+    case .email:
+      return false
+    case .password,
+         .confirmPassword:
+      return true
     }
   }
 }

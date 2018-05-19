@@ -18,13 +18,20 @@ extension XCUIElementQuery {
     return self[content.localizedContent.value]
   }
   
-  func withPlaceholder(_ placeholder: PlaceholderLocalizable) -> XCUIElement {
-    let predicate = NSPredicate { item, _ in
+  func withLocalized(_ localized: Localized) -> XCUIElement {
+    return self[localized.value]
+  }
+  
+  fileprivate func withString(_ string: String) -> XCUIElement {
+    return self[string]
+  }
+  fileprivate static func placeholderPredicate(for placeholder: PlaceholderLocalizable) -> NSPredicate {
+    return NSPredicate { item, _ in
       // This actually returns an XCElementSnapshot, which is framework-private. From the class-dumped headers:
       // https://github.com/orta/XCTest-Public-Headers/blob/master/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework/XCTest/XCElementSnapshot.h
       // You can see that it's an NSObject subclass. So let's at least get that far:
       guard let anything = item as? NSObject  else {
-          return false
+        return false
       }
       
       // You can also see from the class-dumped headers that there's a
@@ -39,23 +46,43 @@ extension XCUIElementQuery {
         // There was a value, but there's no localized placeholder. That doesn't match.
         return false
       }
-
+      
       // Holy hell, an actual value comparison!
       return placeholderValue == localizedPlaceholder
     }
-    
+  }
+  
+  func withPlaceholder(_ placeholder: PlaceholderLocalizable) -> XCUIElement {
+    let predicate = XCUIElementQuery.placeholderPredicate(for: placeholder)
     return self.element(matching: predicate)
   }
 }
 
 extension XCUIApplication {
   
+  private func textFieldForInput(_ input: TextInputLocalizable) -> XCUIElement {
+    if input.isSecure {
+      return self.secureTextFields.withPlaceholder(input)
+    } else {
+      return self.textFields.withPlaceholder(input)
+    }
+  }
   func tapBackButton() {
     self.navigationBars.buttons["Back"].tap()
   }
 
   func tapButtonWithTitle(_ title: TitleLocalizable) {
     self.buttons.withTitle(title).tap()
+  }
+  
+  func selectTextInput(_ input: TextInputLocalizable,
+                       file: StaticString = #file,
+                       line: UInt = #line) {
+    self.textFieldForInput(input).tap()
+    self.assertTextInputIsActive(true,
+                                 input: input,
+                                 file: file,
+                                 line: line)
   }
   
   func assertButtonExists(_ exists: Bool,
@@ -78,16 +105,22 @@ extension XCUIApplication {
                    line: line)
   }
   
+  func assertLabelExists(_ exists: Bool,
+                         for localized: Localized,
+                         file: StaticString = #file,
+                         line: UInt = #line) {
+    XCTAssertEqual(exists,
+                   self.staticTexts.withLocalized(localized).exists,
+                   file: file,
+                   line: line)
+  }
+  
   func assertTextInputExists(_ exists: Bool,
-                             withInputInfo info: (TitleLocalizable & PlaceholderLocalizable),
+                             input: TextInputLocalizable,
                              file: StaticString = #file,
                              line: UInt = #line) {
     XCTAssertEqual(exists,
-                   self.staticTexts.withTitle(info).exists,
-                   file: file,
-                   line: line)
-    XCTAssertEqual(exists,
-                   self.textFields.withPlaceholder(info).exists,
+                   self.input(input).exists,
                    file: file,
                    line: line)
   }
@@ -97,7 +130,7 @@ extension XCUIApplication {
                               file: StaticString = #file,
                               line: UInt = #line) {
    
-   let foundAfterWait = self.buttons.withTitle(title).waitForExistence(timeout: timeout)
+    let foundAfterWait = self.buttons.withTitle(title).waitForExistence(timeout: timeout)
     XCTAssertTrue(foundAfterWait,
                   file: file,
                   line: line)
@@ -114,8 +147,21 @@ extension XCUIApplication {
   }
   
   func enterText(_ text: String,
-                 intoTextFieldWithPlaceholder placeholder: PlaceholderLocalizable) {
-    self.textFields.withPlaceholder(placeholder).typeText(text)
+                 intoInput input: TextInputLocalizable) {
+    
+    self.textFieldForInput(input).typeText(text)
+  }
+  func assertTextInputIsActive(_ active: Bool,
+                               input: TextInputLocalizable,
+                               isSecure: Bool = false,
+                               file: StaticString = #file,
+                               line: UInt = #line) {
+    let textInput = self.textFieldForInput(input)
+    XCTAssertEqual(active,
+                   textInput.hasKeyboardFocus,
+                   file: file,
+                   line: line)
+  }
   }
 }
 

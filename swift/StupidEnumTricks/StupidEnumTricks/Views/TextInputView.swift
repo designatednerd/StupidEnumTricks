@@ -206,9 +206,10 @@ class TextInputView: UIView, InputColorConfigurable {
   
   // MARK: - Localization
   
-  func configure<T: TitleLocalizable & PlaceholderLocalizable>(using type: T) {
+  func configure<T: TextInputLocalizable>(using type: T) {
     self.title = type.localizedTitle.value
     self.placeholder = type.localizedPlaceholder?.value
+    self.isSecureTextEntry = type.isSecure
   }
   
   // MARK: - Configuration

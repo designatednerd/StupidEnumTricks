@@ -13,7 +13,8 @@ enum SignInInput {
   case password
 }
 
-extension SignInInput: TitleLocalizable {
+extension SignInInput: TextInputLocalizable {
+  
   var localizedTitle: Localized {
     switch self {
     case .email:
@@ -22,15 +23,22 @@ extension SignInInput: TitleLocalizable {
       return .input_title_password
     }
   }
-}
-
-extension SignInInput: PlaceholderLocalizable {
+  
   var localizedPlaceholder: Localized? {
     switch self {
     case .email:
       return .input_placeholder_email
     case .password:
       return .input_placeholder_password
+    }
+  }
+  
+  var isSecure: Bool {
+    switch self {
+    case .email:
+      return false
+    case .password:
+      return true 
     }
   }
 }

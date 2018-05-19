@@ -13,6 +13,8 @@
 		9B4D360520ADDAD900DE60F9 /* LegaleseEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360320ADDAD700DE60F9 /* LegaleseEnums.swift */; };
 		9B4D360720AECE3C00DE60F9 /* AdorableCatEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360620AECE3C00DE60F9 /* AdorableCatEnums.swift */; };
 		9B4D360820AECE3C00DE60F9 /* AdorableCatEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360620AECE3C00DE60F9 /* AdorableCatEnums.swift */; };
+		9B4D360D20AF09C300DE60F9 /* TextInputLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360C20AF09C300DE60F9 /* TextInputLocalizable.swift */; };
+		9B4D360E20AF09C300DE60F9 /* TextInputLocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4D360C20AF09C300DE60F9 /* TextInputLocalizable.swift */; };
 		9B6BCB9020A57FCC00B0271A /* UILabel+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */; };
 		9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */; };
 		9B82DCB120AB4519009548D8 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B82DCB020AB4519009548D8 /* Localized.swift */; };
@@ -72,6 +74,7 @@
 		9B4D35FD20ADCB3400DE60F9 /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		9B4D360320ADDAD700DE60F9 /* LegaleseEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegaleseEnums.swift; sourceTree = "<group>"; };
 		9B4D360620AECE3C00DE60F9 /* AdorableCatEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdorableCatEnums.swift; sourceTree = "<group>"; };
+		9B4D360C20AF09C300DE60F9 /* TextInputLocalizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputLocalizable.swift; sourceTree = "<group>"; };
 		9B6BCB8F20A57FCC00B0271A /* UILabel+Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Content.swift"; sourceTree = "<group>"; };
 		9B82DCAE20AB438A009548D8 /* SplashScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenUITests.swift; sourceTree = "<group>"; };
 		9B82DCB020AB4519009548D8 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
@@ -246,6 +249,7 @@
 				9BEE4AC520A48BBB00121519 /* ContentLocalizable.swift */,
 				9BEE4AC320A48B0500121519 /* SeguePerforming.swift */,
 				9BAD02E920AB4D97008C1125 /* PlaceholderLocalizable.swift */,
+				9B4D360C20AF09C300DE60F9 /* TextInputLocalizable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -411,6 +415,7 @@
 				9BAD02EA20AB4D97008C1125 /* PlaceholderLocalizable.swift in Sources */,
 				9BAD02EE20AB6AD4008C1125 /* AdorableCatViewController.swift in Sources */,
 				9BAD02F020AB6C11008C1125 /* Asset.swift in Sources */,
+				9B4D360D20AF09C300DE60F9 /* TextInputLocalizable.swift in Sources */,
 				9BEE4ABF20A485B700121519 /* MainStoryboardSegue.swift in Sources */,
 				9BAD02F220AB6EF3008C1125 /* Array+Random.swift in Sources */,
 				9B4D360720AECE3C00DE60F9 /* AdorableCatEnums.swift in Sources */,
@@ -441,6 +446,7 @@
 				9BDCBBC320AC8C1F00FE5618 /* Localized.swift in Sources */,
 				9B82DCAF20AB438A009548D8 /* SplashScreenUITests.swift in Sources */,
 				9BDCBBC920AC8CCF00FE5618 /* XCUIApplication+Localized.swift in Sources */,
+				9B4D360E20AF09C300DE60F9 /* TextInputLocalizable.swift in Sources */,
 				9BDCBBD220AD988F00FE5618 /* BaseXCUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

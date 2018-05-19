@@ -15,14 +15,14 @@ class SplashScreenUITests: BaseXCUITests {
 
     self.app.waitForNavigationBarTitle(.sign_in_screen_title)
     
-    self.app.assertTextInputExists(true, withInputInfo: SignInInput.email)
+    self.app.assertTextInputExists(true, input: SignInInput.email)
     
     self.app.tapBackButton()
   }
   
   func testTappingSignUpGoesToCorrectPlace() {
     self.app.tapButtonWithTitle(LandingScreenButton.signUp)
-    self.app.assertTextInputExists(true, withInputInfo: RegistrationInput.confirmPassword)
+    self.app.assertTextInputExists(true, input: RegistrationInput.confirmPassword)
     
     self.app.tapBackButton()
   }

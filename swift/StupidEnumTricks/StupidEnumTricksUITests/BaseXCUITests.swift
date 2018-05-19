@@ -32,4 +32,29 @@ class BaseXCUITests: XCTestCase {
     BaseXCUITests.app = XCUIApplication()
     self.app.launch()
   }
+  
+  func enterNewlineToMoveFrom(_ fromInput: TextInputLocalizable,
+                              toInput: TextInputLocalizable?,
+                              file: StaticString = #file,
+                              line: UInt = #line) {
+    
+    self.app.assertTextInputIsActive(true,
+                                     input: fromInput,
+                                     file: file,
+                                     line: line)
+    
+    self.app.enterNewline()
+    
+    self.app.assertTextInputIsActive(false,
+                                     input: fromInput,
+                                     file: file,
+                                     line: line)
+    
+    if let toInput = toInput {
+      self.app.assertTextInputIsActive(true,
+                                       input: toInput,
+                                       file: file,
+                                       line: line)
+    } // else, nothing to check for.
+  }
 }
