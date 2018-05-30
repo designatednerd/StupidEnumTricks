@@ -1,0 +1,7 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="primary_margin">16dp</dimen>
+    <dimen name="half_margin">8dp</dimen>
+    <dimen name="quarter_margin">4dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
