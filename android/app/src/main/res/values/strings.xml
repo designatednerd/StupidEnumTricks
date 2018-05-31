@@ -2,8 +2,9 @@
     <string name="app_name">StupidEnumTricks</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">your@email.com</string>
-    <string name="prompt_password">s3cur1ty!</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_confirm">Confirm Password</string>
 
     <string name="action_sign_in">Sign in</string>
     <string name="action_sign_up">Sign up</string>
@@ -19,4 +20,5 @@
 
     <string name="text_activity_main">Welcome to AwesomeApp!</string>
     <string name="text_activity_terms">Terms &amp; Conditions Of Use</string>
+    <string name="title_activity_adorable_cat">Meow</string>
 </resources>

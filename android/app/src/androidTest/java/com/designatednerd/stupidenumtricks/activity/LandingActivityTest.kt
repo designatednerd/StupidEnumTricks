@@ -12,7 +12,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
-class LandingActivityTest internal constructor() {
+class LandingActivityTest {
 
     private val landingRobot: LandingScreenRobot by lazy { LandingScreenRobot() }
 

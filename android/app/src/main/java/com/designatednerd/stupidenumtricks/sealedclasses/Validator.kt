@@ -1,6 +1,5 @@
 package com.designatednerd.stupidenumtricks.sealedclasses
 
-import android.support.annotation.StringRes
 import android.text.Editable
 import com.designatednerd.stupidenumtricks.R
 

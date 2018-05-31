@@ -19,7 +19,10 @@
         </activity>
         <activity android:name=".activity.SignUpActivity"/>
         <activity android:name=".activity.LoginActivity"/>
-        <activity android:name=".activity.ViewTermsActivity"></activity>
+        <activity android:name=".activity.ViewTermsActivity"/>
+        <activity android:name=".activity.AdorableCatActivity"
+                  android:label="@string/title_activity_adorable_cat"
+                  android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

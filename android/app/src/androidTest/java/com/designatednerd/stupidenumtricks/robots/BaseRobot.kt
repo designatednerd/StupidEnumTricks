@@ -3,8 +3,7 @@ package com.designatednerd.stupidenumtricks.robots
 import android.support.annotation.StringRes
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.ViewInteraction
-import android.support.test.espresso.action.ViewActions.click
-import android.support.test.espresso.action.ViewActions.replaceText
+import android.support.test.espresso.action.ViewActions
 import android.support.test.espresso.assertion.ViewAssertions.doesNotExist
 import android.support.test.espresso.assertion.ViewAssertions.matches
 import android.support.test.espresso.matcher.ViewMatchers.*
@@ -12,21 +11,41 @@ import android.support.test.espresso.matcher.ViewMatchers.*
 
 open class BaseRobot {
 
+    fun viewWithHint(@StringRes hintResId: Int): ViewInteraction {
+        return onView(withHint(hintResId))
+    }
+
+    fun viewWithText(@StringRes textResId: Int): ViewInteraction {
+        return onView(withText(textResId))
+    }
+
     fun clickButton(@StringRes titleResId: Int): ViewInteraction {
-        return onView(withText(titleResId))
-                .perform(click())
+        return viewWithText(titleResId).click()
     }
 
     fun enterTextIntoEditTextWithHint(@StringRes hintResId: Int, text: String): ViewInteraction {
-        return onView(withHint(hintResId)).perform(replaceText(text))
+        return viewWithHint(hintResId).replaceText(text)
     }
 
     fun viewVisibleWithText(@StringRes textResId: Int, visible: Boolean): ViewInteraction {
-        return if (visible) {
-            onView(withText(textResId)).check(matches(isCompletelyDisplayed()))
+        return viewWithText(textResId).checkVisible(visible)
+    }
 
-        } else {
-            onView(withText(textResId)).check(doesNotExist())
-        }
+    fun viewVisibleWithHint(@StringRes hintResId: Int, visible: Boolean): ViewInteraction {
+        return viewWithHint(hintResId).checkVisible(visible)
     }
 }
+
+fun ViewInteraction.click() = perform(ViewActions.click())
+
+fun ViewInteraction.replaceText(text: String) = perform(ViewActions.replaceText(text))
+
+fun ViewInteraction.checkVisible(visible: Boolean): ViewInteraction {
+    return if (visible) {
+        check(matches(isCompletelyDisplayed()))
+    } else {
+        check(doesNotExist())
+    }
+}
+
+fun ViewInteraction.hasSiblingWithText(@StringRes textResId: Int) = check(matches(hasSibling(withText(textResId))))

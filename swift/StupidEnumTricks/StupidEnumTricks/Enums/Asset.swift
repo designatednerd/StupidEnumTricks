@@ -10,7 +10,7 @@
 import UIKit
 
 enum Asset: String {
-  case cinnamon_rolls
+  case cinnamonRolls = "cinnamon_rolls"
   case innocent
   case no
   case snack
@@ -23,7 +23,7 @@ enum Asset: String {
   // A simulation of `CaseIterable`, coming in Swift 4.2
   static var allCases: [Asset] {
     return [
-      .cinnamon_rolls,
+      .cinnamonRolls,
       .innocent,
       .no,
       .snack,
